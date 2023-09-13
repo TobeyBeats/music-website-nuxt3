@@ -1,0 +1,36 @@
+@font-face {
+	font-family: 'Jost';
+	font-style: normal;
+	font-weight: 1000;
+	src: url('/fonts/Jost-Black.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Jost';
+	font-style: normal;
+	font-weight: 900;
+	src: url('/fonts/Jost-ExtraBold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Jost';
+	font-style: normal;
+	font-weight: 800;
+	src: url('/fonts/Jost-Bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Jost';
+	font-style: normal;
+	font-weight: 700;
+	src: url('/fonts/Jost-SemiBold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Jost';
+	font-style: normal;
+	font-weight: 600;
+	src: url('/fonts/Jost-Medium.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Jost';
+	font-style: normal;
+	font-weight: 500;
+	src: url('/fonts/Jost-Regular.ttf') format('truetype');
+}
