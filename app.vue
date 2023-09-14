@@ -26,7 +26,24 @@
 body {
 	font-family: 'Jost';
 	font-weight: 500;
+	font-size: 15px;
 	color: var(--text-color-default);
 	background-color: var(--background-color);
+}
+
+a {
+	color: var(--text-color-highlight);
+	text-decoration: underline;
+	text-decoration-thickness: 1.5px;
+	text-decoration-color: #00000000;
+	transition: text-decoration-color 0.2s;
+
+	&:visited {
+		color: var(--text-color-highlight);
+	}
+
+	&:hover, &:focus-visible {
+		text-decoration-color: currentColor;
+	}
 }
 </style>

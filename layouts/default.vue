@@ -13,7 +13,8 @@
 }
 main {
 	max-width: var(--max-content-width);
-	margin-inline: var(--space-sides);
-	margin-top: calc(var(--navbar-height) + var(--space-sides))
+	padding-inline: var(--space-sides);
+	margin-top: calc(var(--navbar-height) + var(--space-sides));
+	margin-inline: auto;
 }
 </style>
