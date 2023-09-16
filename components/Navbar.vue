@@ -41,10 +41,43 @@
 				</a>
 			</li>
 		</ul>
+
+		<div id="navbar-collapse">
+			<Menu>
+				TobeyBeats
+				
+				<MenuItems>
+					<div>
+						<p>TobeyBeats</p>
+					</div>
+					<div>
+						<NuxtLink to="/">Home</NuxtLink>
+					</div>
+					<div>
+						<NuxtLink to="/releases">Releases</NuxtLink>
+					</div>
+					<div>
+						<NuxtLink to="/playlists">Playlists</NuxtLink>
+					</div>
+					<div>
+						<NuxtLink to="/about">About</NuxtLink>
+					</div>
+				</MenuItems>
+				<MenuButton class="menu-button">
+					≡
+				</MenuButton>
+			</Menu>
+		</div>
 	</nav>
 </template>
 
+<script setup>
+import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
+</script>
+
 <style lang="scss">
+$breakpoint: 880px;
+
 #navbar {
 	height: var(--navbar-height);
 	width: 100%;
@@ -63,7 +96,7 @@
 	margin-inline: auto;
 	height: 100%;
 	list-style: none;
-	display: flex;
+	display: none;
 	flex-direction: row;
 	align-items: center;
 	gap: 3rem;
@@ -71,5 +104,32 @@
 	& > li > a {
 		padding-block: 1.5rem;
 	}
+
+	@media screen and (min-width: $breakpoint) {
+		display: flex;
+	}
+}
+
+#navbar-collapse {
+	display: flex;
+	padding-inline: var(--space-sides);
+	margin-inline: auto;
+	height: 100%;
+	flex-direction: row;
+	align-items: center;
+
+	@media screen and (min-width: $breakpoint) {
+		display: none;
+	}
+}
+
+.menu-button {
+	margin-left: auto;
+	background: none;
+	border: none;
+	color: currentColor;
+	cursor: pointer;
+	font-size: 20px;
+	padding-bottom: 3px;
 }
 </style>
