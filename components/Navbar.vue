@@ -19,20 +19,25 @@
 			<li>
 				<NuxtLink to="/about">About</NuxtLink>
 			</li>
+			<li style="margin-left: auto;">
+				<a href="#" style="
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+				">
+					<img :src="(constants.assets.discordLogoWhite)" alt="" width="27px" height="27px" style="
+						margin-right: 0.33rem;
+					" />
+					Discord Server ↗
+				</a>
+			</li>
 			<li>
 				<a href="#" style="
 					display: flex;
 					flex-direction: row;
 					align-items: center;
 				">
-					<img :src="constants.assets.discordLogoWhite" alt="" width="27px" height="27px" style="
-						margin-right: 0.33rem;
-					" />Discord Server ↗
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<img :src="constants.assets.instagramLogoWhite" alt="Instagram" width="27px" height="27px" />
+					<img :src="(constants.assets.instagramLogoWhite)" alt="Instagram" width="27px" height="27px" />
 				</a>
 			</li>
 		</ul>
