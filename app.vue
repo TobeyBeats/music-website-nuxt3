@@ -23,12 +23,25 @@
 	box-sizing: border-box;
 }
 
-body {
+body, .display-p {
 	font-family: 'Jost';
 	font-weight: 500;
 	font-size: 15px;
 	color: var(--text-color-default);
 	background-color: var(--background-color);
+}
+
+h1, .display-h1 {
+	font-size: 40px;
+	color: var(--text-color-highlight);
+}
+
+h2, .display-h2 {
+	font-size: 20px;
+}
+
+h3, h4, h5, h6 {
+	font-size: inherit;
 }
 
 a {

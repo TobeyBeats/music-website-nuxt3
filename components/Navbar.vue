@@ -20,52 +20,44 @@
 				<NuxtLink to="/about">About</NuxtLink>
 			</li>
 			<li style="margin-left: auto;">
-				<a href="#" style="
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-				">
-					<img :src="(constants.assets.discordLogoWhite)" alt="" width="27px" height="27px" style="
-						margin-right: 0.33rem;
-					" />
-					Discord Server ↗
-				</a>
+				<IconLink href="#" :image-src="constants.assets.discordLogoWhite">Discord Server ↗</IconLink>
 			</li>
 			<li>
-				<a href="#" style="
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-				">
-					<img :src="(constants.assets.instagramLogoWhite)" alt="Instagram" width="27px" height="27px" />
-				</a>
+				<IconLink href="#" :image-src="constants.assets.instagramLogoWhite"></IconLink>
 			</li>
 		</ul>
 
 		<div id="navbar-collapse">
 			<Menu>
 				TobeyBeats
-				
-				<MenuItems>
-					<div>
-						<p>TobeyBeats</p>
-					</div>
-					<div>
-						<NuxtLink to="/">Home</NuxtLink>
-					</div>
-					<div>
-						<NuxtLink to="/releases">Releases</NuxtLink>
-					</div>
-					<div>
-						<NuxtLink to="/playlists">Playlists</NuxtLink>
-					</div>
-					<div>
-						<NuxtLink to="/about">About</NuxtLink>
-					</div>
-				</MenuItems>
+				<Transition>
+					<MenuItems id="navbar-collapse-item-container">
+						<ul>
+							<li>
+								<NuxtLink to="/">Home</NuxtLink>
+							</li>
+							<li>
+								<NuxtLink to="/releases">Releases</NuxtLink>
+							</li>
+							<li>
+								<NuxtLink to="/playlists">Playlists</NuxtLink>
+							</li>
+							<li>
+								<NuxtLink to="/about">About</NuxtLink>
+							</li>
+							<li>
+								<IconLink href="#" :image-src="constants.assets.discordLogoWhite">Discord Server ↗</IconLink>
+							</li>
+							<li>
+								<IconLink href="#" :image-src="constants.assets.instagramLogoWhite">Instagram ↗</IconLink>
+							</li>
+						</ul>
+					</MenuItems>
+				</Transition>
 				<MenuButton class="menu-button">
 					≡
 				</MenuButton>
+
 			</Menu>
 		</div>
 	</nav>
@@ -78,16 +70,20 @@ import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
 <style lang="scss">
 $breakpoint: 880px;
 
-#navbar {
-	height: var(--navbar-height);
-	width: 100%;
-	position: fixed;
-	top: 0;
+@mixin background {
 	background-color: var(--background-color-25);
 	--blur-amount: 10px;
 	backdrop-filter: blur(var(--blur-amount));
 	--webkit-backdrop-filter: blur(var(--blur-amount));
 	box-shadow: var(--box-shadow-default);
+}
+
+#navbar {
+	height: var(--navbar-height);
+	width: 100%;
+	position: fixed;
+	top: 0;
+	@include background;
 }
 
 #navbar-content {
@@ -117,9 +113,27 @@ $breakpoint: 880px;
 	height: 100%;
 	flex-direction: row;
 	align-items: center;
+	position: relative;
 
 	@media screen and (min-width: $breakpoint) {
 		display: none;
+	}
+
+	&-item-container {
+		@include background;
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		padding-inline: var(--space-sides);
+		padding-block: calc(var(--navbar-height) / 2 - 0.5rem);
+
+		& > ul {
+			list-style: none;
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+		}
 	}
 }
 
@@ -131,5 +145,6 @@ $breakpoint: 880px;
 	cursor: pointer;
 	font-size: 20px;
 	padding-bottom: 3px;
+	z-index: 10;
 }
 </style>

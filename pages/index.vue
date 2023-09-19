@@ -1,6 +1,4 @@
 <template>
-	<div>
-		Hello
-		<br><br><br><br><br><br><br><br><br><br><br>hello<br><br><br><br><br><br><br><br>hello<br><br><br><br><br><br><br><br><br><br><br><br>he
-	</div>
+	<h1 style="display: none;">Home</h1>
+	
 </template>
