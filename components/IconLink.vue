@@ -6,7 +6,9 @@
 		gap: 0.33rem;
 	">
 		<img :src="imageSrc" alt="" style="width: 27px; height: auto; aspect-ratio: 1 / 1;" />
-		<slot />
+		<p>
+			<slot />
+		</p>
 	</a>
 </template>
 
