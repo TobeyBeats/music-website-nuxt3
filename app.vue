@@ -21,6 +21,9 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	border: none;
+	overflow: visible;
+	transition: all 0.2s;
 }
 
 body, .display-p {
@@ -48,8 +51,7 @@ a {
 	color: var(--text-color-highlight);
 	text-decoration: underline;
 	text-decoration-thickness: 1.5px;
-	text-decoration-color: #00000000;
-	transition: text-decoration-color 0.2s;
+	text-decoration-color: transparent;
 
 	&:visited {
 		color: var(--text-color-highlight);
