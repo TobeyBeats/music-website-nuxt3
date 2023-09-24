@@ -20,10 +20,14 @@
 				<NuxtLink to="/about">About</NuxtLink>
 			</li>
 			<li style="margin-left: auto;">
-				<IconLink href="#" :image-src="constants.assets.discordLogoWhite">Discord Server ↗</IconLink>
+				<a href="#">
+					<IconText :image-src="constants.assets.discordLogoWhite">Discord Server ↗</IconText>
+				</a>
 			</li>
 			<li>
-				<IconLink href="#" :image-src="constants.assets.instagramLogoWhite"></IconLink>
+				<a href="#">
+					<IconText :image-src="constants.assets.instagramLogoWhite"></IconText>
+				</a>
 			</li>
 		</ul>
 
@@ -46,10 +50,14 @@
 								<NuxtLink to="/about">About</NuxtLink>
 							</li>
 							<li>
-								<IconLink href="#" :image-src="constants.assets.discordLogoWhite">Discord Server ↗</IconLink>
+								<a href="#">
+									<IconText :image-src="constants.assets.discordLogoWhite">Discord Server ↗</IconText>
+								</a>
 							</li>
 							<li>
-								<IconLink href="#" :image-src="constants.assets.instagramLogoWhite">Instagram ↗</IconLink>
+								<a href="#">
+									<IconText :image-src="constants.assets.instagramLogoWhite">Instagram ↗</IconText>
+								</a>
 							</li>
 						</ul>
 					</MenuItems>

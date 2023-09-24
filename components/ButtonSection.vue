@@ -16,7 +16,7 @@
 const props = defineProps<{
 	to: string,
 	colors: [string, string]
-}>();
+}>()
 </script>
 
 <style lang="scss">
@@ -26,6 +26,11 @@ const props = defineProps<{
 	position: relative;
 	padding: var(--background-padding);
 	margin: calc(0px - var(--background-padding));
+	color: var(--text-color-default);
+
+	.inner-link {
+		color: var(--text-color-highlight);
+	}
 
 	&:hover, &:focus-visible {
 		text-decoration-color: transparent;

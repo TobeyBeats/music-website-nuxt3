@@ -7,22 +7,22 @@
 			</h2>
 			<div class="link-group">
 				<ButtonSection to="#" :colors="colorsDefault">
-					<IconLink href="" :image-src="constants.assets.spotifyLogoWhite">Spotify ↗</IconLink>
+					<IconText :image-src="constants.assets.spotifyLogoWhite" class="inner-link">Spotify ↗</IconText>
 				</ButtonSection>
 				<ButtonSection to="#" :colors="colorsDefault">
-					<IconLink href="" :image-src="constants.assets.amazonLogoWhite">Amazon Music ↗</IconLink>
+					<IconText :image-src="constants.assets.amazonLogoWhite" class="inner-link">Amazon Music ↗</IconText>
 				</ButtonSection>
 				<ButtonSection to="#" :colors="colorsDefault">
-					<IconLink href="" :image-src="constants.assets.appleMusicLogoWhite">Apple Music ↗</IconLink>
+					<IconText :image-src="constants.assets.appleMusicLogoWhite" class="inner-link">Apple Music ↗</IconText>
 				</ButtonSection>
 				<ButtonSection to="#" :colors="colorsDefault">
-					<IconLink href="" :image-src="constants.assets.youtubeLogoWhite">Youtube ↗</IconLink>
+					<IconText :image-src="constants.assets.youtubeLogoWhite" class="inner-link">Youtube ↗</IconText>
 				</ButtonSection>
 				<ButtonSection to="#" :colors="colorsDefault">
-					<IconLink href="" :image-src="constants.assets.deezerLogoWhite">Deezer ↗</IconLink>
+					<IconText :image-src="constants.assets.deezerLogoWhite" class="inner-link">Deezer ↗</IconText>
 				</ButtonSection>
 				<ButtonSection to="#" :colors="colorsDefault">
-					<IconLink href="" :image-src="constants.assets.soundcloudLogoWhite">Soundcloud ↗</IconLink>
+					<IconText :image-src="constants.assets.soundcloudLogoWhite" class="inner-link">Soundcloud ↗</IconText>
 				</ButtonSection>
 			</div>
 		</section>
@@ -31,13 +31,13 @@
 			<h2 class="display-h1" style="margin-bottom: calc(2 * var(--space-unit));">
 				New Release
 			</h2>
-			<ButtonSection to="#" :colors="['green', 'yellow']">
+			<ButtonSection to="/releases" :colors="['green', 'yellow']">
 				<div style="
 					display: flex;
 					flex-direction: row;
 					gap: var(--space-unit);
 				">
-					<img src="" alt="Cover Art" width="200" height="200" />
+					<img src="/images/covers/under%20water%20cover.jpg" alt="Cover Art" width="200" height="200" class="rounded box-shadow-default" />
 					<div style="
 						display: flex;
 						flex-direction: column;
@@ -46,7 +46,7 @@
 						<p class="display-h2">Under Water</p>
 						<p>TobeyBeats & LizAnn</p>
 						<p class="faded">09.12.2022</p>
-						<a style="margin-top: auto;"><p>Listen now →</p></a>
+						<p style="margin-top: auto;" class="inner-link">Listen now →</p>
 					</div>
 				</div>
 			</ButtonSection>

@@ -16,6 +16,7 @@
 	--text-color-faded: #d0d0d0a0;
 	--box-shadow-default: 0px 0px 25px rgba(0, 0, 0, 0.5);
 	--space-unit: 1rem;
+	--border-radius-small: 0.3rem;
 }
 
 * {
@@ -107,5 +108,13 @@ a {
 
 .faded {
 	color: var(--text-color-faded);
+}
+
+.rounded {
+	border-radius: var(--border-radius-small);
+}
+
+.box-shadow-default {
+	box-shadow: var(--box-shadow-default);
 }
 </style>
