@@ -27,6 +27,7 @@
 	overflow: visible;
 	transition: all 0.2s;
 	text-decoration-color: transparent;
+	text-decoration-thickness: 1.5px;
 }
 
 body, .display-p {
@@ -35,6 +36,10 @@ body, .display-p {
 	font-size: 15px;
 	color: var(--text-color-default);
 	background-color: var(--background-color);
+}
+
+a {
+	color: inherit;
 }
 
 p {
@@ -91,10 +96,9 @@ h3, h4, h5, h6 {
 	font-size: inherit;
 }
 
-a {
+.link {
 	color: var(--text-color-highlight);
 	text-decoration: underline;
-	text-decoration-thickness: 1.5px;
 	text-decoration-color: transparent;
 
 	&:visited {
@@ -104,6 +108,10 @@ a {
 	&:hover, &:focus-visible {
 		text-decoration-color: currentColor;
 	}
+}
+
+.router-link-active {
+	font-weight: 800;
 }
 
 .faded {

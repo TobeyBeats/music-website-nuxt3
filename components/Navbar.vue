@@ -8,20 +8,20 @@
 				<p>—</p>
 			</li>
 			<li>
-				<NuxtLink to="/">Home</NuxtLink>
+				<NuxtLink to="/" class="link">Home</NuxtLink>
 			</li>
 			<li>
-				<NuxtLink to="/releases">Releases</NuxtLink>
+				<NuxtLink to="/releases" class="link">Releases</NuxtLink>
 			</li>
 			<li>
-				<NuxtLink to="/playlists">Playlists</NuxtLink>
+				<NuxtLink to="/playlists" class="link">Playlists</NuxtLink>
 			</li>
 			<li>
-				<NuxtLink to="/about">About</NuxtLink>
+				<NuxtLink to="/about" class="link">About</NuxtLink>
 			</li>
 			<li style="margin-left: auto;">
 				<a href="#">
-					<IconText :image-src="constants.assets.discordLogoWhite">Discord Server ↗</IconText>
+					<IconText :image-src="constants.assets.discordLogoWhite" class="link">Discord Server ↗</IconText>
 				</a>
 			</li>
 			<li>
@@ -38,25 +38,25 @@
 					<MenuItems id="navbar-collapse-item-container">
 						<ul>
 							<li>
-								<NuxtLink to="/">Home</NuxtLink>
+								<NuxtLink to="/" class="link">Home</NuxtLink>
 							</li>
 							<li>
-								<NuxtLink to="/releases">Releases</NuxtLink>
+								<NuxtLink to="/releases" class="link">Releases</NuxtLink>
 							</li>
 							<li>
-								<NuxtLink to="/playlists">Playlists</NuxtLink>
+								<NuxtLink to="/playlists" class="link">Playlists</NuxtLink>
 							</li>
 							<li>
-								<NuxtLink to="/about">About</NuxtLink>
+								<NuxtLink to="/about" class="link">About</NuxtLink>
 							</li>
 							<li>
 								<a href="#">
-									<IconText :image-src="constants.assets.discordLogoWhite">Discord Server ↗</IconText>
+									<IconText :image-src="constants.assets.discordLogoWhite" class="link">Discord Server ↗</IconText>
 								</a>
 							</li>
 							<li>
 								<a href="#">
-									<IconText :image-src="constants.assets.instagramLogoWhite">Instagram ↗</IconText>
+									<IconText :image-src="constants.assets.instagramLogoWhite" class="link">Instagram ↗</IconText>
 								</a>
 							</li>
 						</ul>
@@ -91,6 +91,7 @@ $breakpoint: 880px;
 	width: 100%;
 	position: fixed;
 	top: 0;
+	z-index: 10;
 	@include background;
 }
 
@@ -141,6 +142,10 @@ $breakpoint: 880px;
 			display: flex;
 			flex-direction: column;
 			gap: 1rem;
+			
+			& > li > a {
+				width: 100%;
+			}
 		}
 	}
 }

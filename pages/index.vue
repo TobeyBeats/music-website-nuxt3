@@ -6,23 +6,23 @@
 				Artist Links
 			</h2>
 			<div class="link-group">
-				<ButtonSection to="#" :colors="colorsDefault">
-					<IconText :image-src="constants.assets.spotifyLogoWhite" class="inner-link">Spotify ↗</IconText>
+				<ButtonSection to="" :colors="colorsDefault">
+					<IconText :image-src="constants.assets.spotifyLogoWhite"><span class="link">Spotify ↗</span></IconText>
 				</ButtonSection>
-				<ButtonSection to="#" :colors="colorsDefault">
-					<IconText :image-src="constants.assets.amazonLogoWhite" class="inner-link">Amazon Music ↗</IconText>
+				<ButtonSection to="" :colors="colorsDefault">
+					<IconText :image-src="constants.assets.amazonLogoWhite"><span class="link">Amazon Music ↗</span></IconText>
 				</ButtonSection>
-				<ButtonSection to="#" :colors="colorsDefault">
-					<IconText :image-src="constants.assets.appleMusicLogoWhite" class="inner-link">Apple Music ↗</IconText>
+				<ButtonSection to="" :colors="colorsDefault">
+					<IconText :image-src="constants.assets.appleMusicLogoWhite"><span class="link">Apple Music ↗</span></IconText>
 				</ButtonSection>
-				<ButtonSection to="#" :colors="colorsDefault">
-					<IconText :image-src="constants.assets.youtubeLogoWhite" class="inner-link">Youtube ↗</IconText>
+				<ButtonSection to="" :colors="colorsDefault">
+					<IconText :image-src="constants.assets.youtubeLogoWhite"><span class="link">Youtube ↗</span></IconText>
 				</ButtonSection>
-				<ButtonSection to="#" :colors="colorsDefault">
-					<IconText :image-src="constants.assets.deezerLogoWhite" class="inner-link">Deezer ↗</IconText>
+				<ButtonSection to="" :colors="colorsDefault">
+					<IconText :image-src="constants.assets.deezerLogoWhite"><span class="link">Deezer ↗</span></IconText>
 				</ButtonSection>
-				<ButtonSection to="#" :colors="colorsDefault">
-					<IconText :image-src="constants.assets.soundcloudLogoWhite" class="inner-link">Soundcloud ↗</IconText>
+				<ButtonSection to="" :colors="colorsDefault">
+					<IconText :image-src="constants.assets.soundcloudLogoWhite"><span class="link">Soundcloud ↗</span></IconText>
 				</ButtonSection>
 			</div>
 		</section>
@@ -46,7 +46,7 @@
 						<p class="display-h2">Under Water</p>
 						<p>TobeyBeats & LizAnn</p>
 						<p class="faded">09.12.2022</p>
-						<p style="margin-top: auto;" class="inner-link">Listen now →</p>
+						<p style="margin-top: auto;"><span class="link">Listen now →</span></p>
 					</div>
 				</div>
 			</ButtonSection>

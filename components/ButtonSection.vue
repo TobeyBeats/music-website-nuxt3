@@ -26,20 +26,19 @@ const props = defineProps<{
 	position: relative;
 	padding: var(--background-padding);
 	margin: calc(0px - var(--background-padding));
-	color: var(--text-color-default);
-
-	.inner-link {
-		color: var(--text-color-highlight);
-	}
 
 	&:hover, &:focus-visible {
-		text-decoration-color: transparent;
+		// text-decoration-color: transparent;
 
 		.button-section-background-blur {
 			opacity: 0.9;
 		}
 		.button-section-background {
 			opacity: 0.75;
+		}
+
+		.link {
+			text-decoration-color: currentColor;
 		}
 	}
 }
