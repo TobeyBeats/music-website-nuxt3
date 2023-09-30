@@ -159,5 +159,10 @@ $breakpoint: 880px;
 	font-size: 20px;
 	padding-bottom: 3px;
 	z-index: 10;
+	color: var(--text-color-highlight);
+
+	&:hover, &:focus-visible {
+		transform: scaleY(1.2);
+	}
 }
 </style>
