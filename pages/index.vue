@@ -31,25 +31,7 @@
 			<h2 class="display-h1" style="margin-bottom: calc(2 * var(--space-unit));">
 				New Release
 			</h2>
-			<ButtonSection to="/releases" :colors="['green', 'yellow']">
-				<div style="
-					display: flex;
-					flex-direction: row;
-					gap: var(--space-unit);
-				">
-					<img src="/images/covers/under%20water%20cover.jpg" alt="Cover Art" width="200" height="200" class="rounded box-shadow-default" />
-					<div style="
-						display: flex;
-						flex-direction: column;
-						gap: calc(var(--space-unit) / 2);
-					">
-						<p class="display-h2">Under Water</p>
-						<p>TobeyBeats & LizAnn</p>
-						<p class="faded">09.12.2022</p>
-						<p style="margin-top: auto;"><span class="link">Listen now →</span></p>
-					</div>
-				</div>
-			</ButtonSection>
+			<ReleaseItem :release="new Release({name: 'Lululul', links: {website: 'https://eee.com/releases/bla'}, participants: [], primaryArtists: 'Myself', releaseDate: new Date(), thumbnailUrl: 'https://foo.bla/images/covers/under%20water%20cover.jpg'})" />
 		</section>
 	</div>
 </template>
@@ -70,5 +52,6 @@
 </style>
 
 <script setup lang="ts">
+import { Release } from "~/utils/releases"
 const colorsDefault: [string, string] = [constants.colorsDefault[0], constants.colorsDefault[1]]
 </script>
