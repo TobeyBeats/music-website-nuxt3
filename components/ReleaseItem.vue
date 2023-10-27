@@ -1,5 +1,5 @@
 <template>
-	<ButtonSection :to="extractRelativePath(release.links.website)" :colors="['green', 'yellow']">
+	<ButtonSection :to="extractRelativePath(release.links.website)" :colors="[release.brightColors[0], release.brightColors[1]]">
 		<div style="
 			display: flex;
 			flex-direction: row;

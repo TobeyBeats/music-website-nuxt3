@@ -2,7 +2,7 @@
 	<h1 style="display: none;">Home</h1>
 	<div class="home-grid">
 		<section>
-			<h2 class="display-h1" style="margin-bottom: calc(2 * var(--space-unit));">
+			<h2 class="display-h1">
 				Artist Links
 			</h2>
 			<div class="link-group">
@@ -28,30 +28,23 @@
 		</section>
 
 		<section>
-			<h2 class="display-h1" style="margin-bottom: calc(2 * var(--space-unit));">
+			<h2 class="display-h1">
 				New Release
 			</h2>
-			<ReleaseItem :release="new Release({name: 'Lululul', links: {website: 'https://eee.com/releases/bla'}, participants: [], primaryArtists: 'Myself', releaseDate: new Date(), thumbnailUrl: 'https://foo.bla/images/covers/under%20water%20cover.jpg'})" />
+			<ReleaseItem :release="release" />
 		</section>
 	</div>
 </template>
 
-<style>
-.link-group {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: calc(2 * var(--space-unit));
-	max-width: 400px;
-}
-
-.home-grid {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: calc(4 * var(--space-unit));
-}
-</style>
-
 <script setup lang="ts">
 import { Release } from "~/utils/releases"
 const colorsDefault: [string, string] = [constants.colorsDefault[0], constants.colorsDefault[1]]
+
+const { data } = await useFetch<ConstructorParameters<typeof Release>[0]>("/releases/under-water", {
+	baseURL: process.env.BASE_URL_API
+})
+if (!data.value) {
+	throw createError("Something went wrong fetching a release")
+}
+const release = new Release(data.value)
 </script>

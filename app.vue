@@ -25,7 +25,7 @@
 	box-sizing: border-box;
 	border: none;
 	overflow: visible;
-	transition: all 0.2s;
+	transition: all 0.3s;
 	text-decoration-color: transparent;
 	text-decoration-thickness: 1.5px;
 }
@@ -63,6 +63,7 @@ h1, .display-h1 {
 	font-size: 40px;
 	font-weight: 800;
 	color: var(--text-color-highlight);
+	margin-bottom: calc(2 * var(--space-unit));
 
 	// &::before {
 	// 	content: '';
@@ -124,5 +125,18 @@ h3, h4, h5, h6 {
 
 .box-shadow-default {
 	box-shadow: var(--box-shadow-default);
+}
+
+.link-group {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: calc(2 * var(--space-unit));
+	max-width: 400px;
+}
+
+.home-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: calc(4 * var(--space-unit));
 }
 </style>

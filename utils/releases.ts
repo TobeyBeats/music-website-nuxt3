@@ -76,7 +76,7 @@ export class Release {
 		this.primaryArtists = data.primaryArtists
 		this.thumbnailUrl = data.thumbnailUrl
 		this.releaseDate = new Date(data.releaseDate)
-		this.brightColors = data.brightColors || []
+		this.brightColors = data.brightColors?.map(c => "#" + c) || []
 		this.tags = data.tags || []
 		this.lyrics = data.lyrics || ""
 		this.links = data.links
