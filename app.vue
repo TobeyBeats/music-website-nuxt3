@@ -47,20 +47,21 @@ a {
 	color: inherit;
 }
 
-p {
+p, h3, h4, h5, h6 {
+	line-height: 130%;
 	&::before {
 		content: '';
 		display: block;
 		height: 0;
 		width: 0;
-		margin-bottom: -4px;
+		margin-bottom: -3.5px;
 	}
 	&::after {
 		content: '';
 		display: block;
 		height: 0;
 		width: 0;
-		margin-top: -5.5px;
+		margin-top: -4.5px;
 	}
 }
 
@@ -82,6 +83,7 @@ h1, .display-h1 {
 h2, .display-h2 {
 	font-size: 20px;
 	font-weight: 800;
+	margin-bottom: var(--space-unit);
 	&::before {
 		content: '';
 		display: block;

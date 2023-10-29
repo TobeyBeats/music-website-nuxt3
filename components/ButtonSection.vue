@@ -1,6 +1,6 @@
 <template>
 	<NuxtLink :to="to">
-		<div class="button-section-wrapper" v-button-section>
+		<div class="button-section-wrapper" :class="to ? '' : 'disabled'" v-button-section>
 			<div class="button-section-background-blur" :style="`
 				background-image: linear-gradient(to bottom right, ${colors[0]}, ${colors[1]});
 				`"></div>
@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
 const props = defineProps<{
-	to: string,
+	to: string | undefined,
 	colors: [string, string]
 }>()
 
@@ -25,7 +25,7 @@ const vButtonSection = {
 			cursorFollower?.animate({
 				backgroundImage: `linear-gradient(to bottom right, ${props.colors[0]}, ${props.colors[1]})`
 			}, {
-				duration: 500,
+				duration: 0,
 				fill: "forwards"
 			})
 		})
@@ -34,7 +34,7 @@ const vButtonSection = {
 			cursorFollower?.animate({
 				backgroundImage: `linear-gradient(to top left, ${constants.colorsDefault[0]}, ${constants.colorsDefault[1]})`
 			}, {
-				duration: 500,
+				duration: 0,
 				fill: "forwards"
 			})
 		})
@@ -50,8 +50,12 @@ const vButtonSection = {
 	padding: var(--background-padding);
 	margin: calc(0px - var(--background-padding));
 
-	&:hover, &:focus-visible {
-		// text-decoration-color: transparent;
+	&.disabled {
+		opacity: 0.75;
+		text-decoration: line-through white;
+	}
+
+	&:hover:not(.disabled), &:focus-visible:not(.disabled) {
 
 		.button-section-background-blur {
 			opacity: 0.9;
@@ -62,6 +66,12 @@ const vButtonSection = {
 
 		.link {
 			text-decoration-color: currentColor;
+		}
+	}
+
+	&:hover, &:focus-visible {
+		.link {
+			text-decoration-color: transparent;
 		}
 	}
 }

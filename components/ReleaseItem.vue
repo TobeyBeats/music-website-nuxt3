@@ -13,8 +13,8 @@
 				flex-direction: column;
 				gap: calc(var(--space-unit) / 2);
 			">
-				<p class="display-h2">{{ release.name }}</p>
-				<p>{{ release.primaryArtists }}</p>
+				<h2 style="margin-bottom: calc(var(--space-unit) / 4);">{{ release.name }}</h2>
+				<p style="margin-bottom: calc(var(--space-unit) / 4);">{{ release.primaryArtists }}</p>
 				<p class="faded">{{ release.releaseDate.toLocaleDateString() }}</p>
 				<p style="margin-top: auto;"><span class="link">Listen now →</span></p>
 			</div>
