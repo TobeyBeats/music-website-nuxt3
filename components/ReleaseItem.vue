@@ -5,7 +5,9 @@
 			flex-direction: row;
 			gap: var(--space-unit);
 		">
-			<img :src="extractRelativePath(release.thumbnailUrl)" alt="Cover Art" width="200" height="200" class="rounded box-shadow-default" />
+			<img :src="extractRelativePath(release.thumbnailUrl)" width="200" height="200" alt="Cover Art" class="rounded squared box-shadow-default"
+				style="min-width: 200px;"
+			/>
 			<div style="
 				display: flex;
 				flex-direction: column;

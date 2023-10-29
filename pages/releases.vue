@@ -8,11 +8,13 @@
 <script setup lang="ts">
 import { Release } from "~/utils/releases"
 
-const { data } = await useFetch<ConstructorParameters<typeof Release>[0][]>("/releases", {
-	baseURL: process.env.BASE_URL_API
+const config = useRuntimeConfig()
+
+const { data, error } = await useFetch<ConstructorParameters<typeof Release>[0][]>("/releases", {
+	baseURL: config.public.baseUrlApi
 })
 if (!data.value) {
-	throw createError("Something went wrong fetching releases")
+	throw error
 }
 const releases: Release[] = data.value.map(rawItem => new Release(rawItem))
 </script>

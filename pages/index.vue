@@ -40,11 +40,14 @@
 import { Release } from "~/utils/releases"
 const colorsDefault: [string, string] = [constants.colorsDefault[0], constants.colorsDefault[1]]
 
-const { data } = await useFetch<ConstructorParameters<typeof Release>[0]>("/releases/under-water", {
-	baseURL: process.env.BASE_URL_API
+const config = useRuntimeConfig()
+
+const { data, error } = await useFetch<ConstructorParameters<typeof Release>[0]>("/releases/under-water", {
+	baseURL: config.public.baseUrlApi
 })
+
 if (!data.value) {
-	throw createError("Something went wrong fetching a release")
+	throw error
 }
 const release = new Release(data.value)
 </script>

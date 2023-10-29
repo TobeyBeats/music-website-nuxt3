@@ -19,6 +19,11 @@
 	--border-radius-small: 0.3rem;
 }
 
+html {
+	min-height: 100vh;
+	position: relative;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -121,6 +126,11 @@ h3, h4, h5, h6 {
 
 .rounded {
 	border-radius: var(--border-radius-small);
+	overflow: hidden;
+}
+
+.squared {
+	aspect-ratio: 1 / 1;
 }
 
 .box-shadow-default {

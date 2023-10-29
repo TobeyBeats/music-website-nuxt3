@@ -4,6 +4,7 @@
 		<main>
 			<slot/>
 		</main>
+		<Footbar />
 	</div>
 </template>
 
@@ -18,5 +19,6 @@ main {
 	padding-inline: var(--space-sides);
 	margin-top: calc(var(--navbar-height) + var(--space-sides));
 	margin-inline: auto;
+	padding-bottom: calc(var(--navbar-height) + var(--space-sides));
 }
 </style>

@@ -1,0 +1,37 @@
+<template>
+	<footer id="footer">
+		<div id="footer-content">
+			<div>
+				<p>© 2023 TobeyBeats</p>
+				<p>
+					<NuxtLink class="link">Privacy Policy</NuxtLink>
+				</p>
+			</div>
+			<div style="margin-left: auto; text-align: right;">
+				<p>Contact: <a class="link" href="mailto:contact@tobeybeats.com">contact@tobeybeats.com</a></p>
+			</div>
+		</div>
+	</footer>
+</template>
+
+<style lang="scss">
+#footer {
+	height: var(--navbar-height);
+	width: 100%;
+	background-color: var(--background-color);
+	box-shadow: var(--box-shadow-default);
+	position: absolute;
+	bottom: 0;
+
+	#footer-content {
+		max-width: var(--max-content-width);
+		padding-inline: var(--space-sides);
+		margin-inline: auto;
+		height: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 3rem;
+	}
+}
+</style>
