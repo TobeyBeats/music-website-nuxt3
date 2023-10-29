@@ -99,7 +99,6 @@ if (!data.value) {
 }
 const release = new Release(data.value)
 
-setActiveColors(release.brightColors[0], release.brightColors[1])
 </script>
 
 <style>

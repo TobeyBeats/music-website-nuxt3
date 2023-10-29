@@ -9,7 +9,7 @@
 <script setup lang="ts">
 import { setActiveColors } from './utils/utils';
 
-setActiveColors(constants.colorsDefault[0], constants.colorsDefault[1])
+onMounted(() => setActiveColors(constants.colorsDefault[0], constants.colorsDefault[1]))
 </script>
 
 <style lang="scss">
