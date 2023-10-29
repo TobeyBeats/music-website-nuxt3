@@ -79,7 +79,7 @@
 </template>
 
 <script setup lang="ts">
-import { newLineToHtml } from "~/utils/utils"
+import { newLineToHtml, setActiveColors } from "~/utils/utils"
 
 const config = useRuntimeConfig()
 const route = useRoute()
@@ -98,6 +98,8 @@ if (!data.value) {
 	throw error
 }
 const release = new Release(data.value)
+
+setActiveColors(release.brightColors[0], release.brightColors[1])
 </script>
 
 <style>

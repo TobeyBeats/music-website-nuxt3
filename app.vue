@@ -6,6 +6,12 @@
 	</div>
 </template>
 
+<script setup lang="ts">
+import { setActiveColors } from './utils/utils';
+
+setActiveColors(constants.colorsDefault[0], constants.colorsDefault[1])
+</script>
+
 <style lang="scss">
 :root {
 	--background-color: #232323;
@@ -17,6 +23,9 @@
 	--box-shadow-default: 0px 0px 25px rgba(0, 0, 0, 0.5);
 	--space-unit: 1rem;
 	--border-radius-small: 0.3rem;
+
+	--active-color-1: white;
+	--active-color-2: white;
 }
 
 html {

@@ -1,6 +1,6 @@
 <template>
 	<div v-follow-cursor id="cursor-follower" :style="`
-		background-image: linear-gradient(to top left, ${colorsDefault[0]}, ${colorsDefault[1]});
+		background-image: linear-gradient(to top left, var(--active-color-1), var(--active-color-2));
 	`"></div>
 </template>
 
