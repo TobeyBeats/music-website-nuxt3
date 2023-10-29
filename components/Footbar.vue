@@ -18,7 +18,10 @@
 #footer {
 	height: var(--navbar-height);
 	width: 100%;
-	background-color: var(--background-color);
+	background-color: var(--background-color-25);
+	--blur-amount: 10px;
+	backdrop-filter: blur(var(--blur-amount));
+	-webkit-backdrop-filter: blur(var(--blur-amount));
 	box-shadow: var(--box-shadow-default);
 	position: absolute;
 	bottom: 0;

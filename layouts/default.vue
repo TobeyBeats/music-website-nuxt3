@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<CursorFollower />
 		<Navbar/>
 		<main>
 			<slot/>

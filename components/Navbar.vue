@@ -82,7 +82,7 @@ $breakpoint: 880px;
 	background-color: var(--background-color-25);
 	--blur-amount: 10px;
 	backdrop-filter: blur(var(--blur-amount));
-	--webkit-backdrop-filter: blur(var(--blur-amount));
+	-webkit-backdrop-filter: blur(var(--blur-amount));
 	box-shadow: var(--box-shadow-default);
 }
 
