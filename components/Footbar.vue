@@ -4,7 +4,7 @@
 			<div>
 				<p>© 2023 TobeyBeats</p>
 				<p>
-					<NuxtLink class="link">Privacy Policy</NuxtLink>
+					<NuxtLink class="link" to="/privacy-policy">Privacy Policy</NuxtLink>
 				</p>
 			</div>
 			<div style="margin-left: auto; text-align: right;">
