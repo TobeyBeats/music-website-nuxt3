@@ -1,7 +1,7 @@
 <template>
 	<h1>{{ release.name }}</h1>
 
-	<div class="home-grid">
+	<div class="grid-default grid-2-1">
 		<div>
 			<p class="display-h2" style="margin-bottom: var(--space-unit);">{{ release.primaryArtists }}</p>
 			<p>{{ release.releaseDate.toLocaleDateString() }}</p>
@@ -101,8 +101,20 @@ const release = new Release(data.value)
 
 </script>
 
-<style>
+<style lang="scss">
 .lyrics {
 	font-style: italic;
+}
+
+.grid-2-1 {
+	grid-template-columns: 1fr 1fr;
+
+	@media screen and (max-width: 1200px) {
+		grid-template-columns: 2fr 1fr;
+	}
+
+	@media screen and (max-width: 880px) {
+		grid-template-columns: 1fr;
+	}
 }
 </style>

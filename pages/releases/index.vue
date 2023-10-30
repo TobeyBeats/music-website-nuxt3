@@ -1,6 +1,6 @@
 <template>
 	<h1>Releases</h1>
-	<div class="home-grid">
+	<div class="grid-default">
 		<ReleaseItem :release="r" v-for="r in releases" :key="r.name" />
 	</div>
 </template>

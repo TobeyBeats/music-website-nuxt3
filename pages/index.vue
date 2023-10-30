@@ -1,6 +1,6 @@
 <template>
 	<h1 style="display: none;">Home</h1>
-	<div class="home-grid">
+	<div class="grid-default">
 		<section>
 			<h2 class="display-h1">
 				Artist Links

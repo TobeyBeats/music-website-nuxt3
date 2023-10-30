@@ -80,13 +80,9 @@ h1, .display-h1 {
 	color: var(--text-color-highlight);
 	margin-bottom: calc(2 * var(--space-unit));
 
-	// &::before {
-	// 	content: '';
-	// 	display: block;
-	// 	height: 0;
-	// 	width: 0;
-	// 	margin-bottom: -24px;
-	// }
+	@media screen and (max-width: 420px) {
+		font-size: 34px;
+	}
 }
 
 h2, .display-h2 {
@@ -153,11 +149,19 @@ h3, h4, h5, h6 {
 	grid-template-columns: 1fr 1fr;
 	gap: calc(2 * var(--space-unit));
 	max-width: 400px;
+
+	@media screen and (max-width: 430px) {
+		grid-template-columns: 1fr;
+	}
 }
 
-.home-grid {
+.grid-default {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: calc(4 * var(--space-unit));
+
+	@media screen and (max-width: 980px) {
+		grid-template-columns: 1fr;
+	}
 }
 </style>
