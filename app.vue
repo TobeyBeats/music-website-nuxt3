@@ -78,10 +78,18 @@ h1, .display-h1 {
 	font-size: 40px;
 	font-weight: 800;
 	color: var(--text-color-highlight);
-	margin-bottom: calc(2 * var(--space-unit));
+	margin-bottom: calc(3 * var(--space-unit));
 
 	@media screen and (max-width: 420px) {
 		font-size: 34px;
+	}
+
+	&::after {
+		content: '';
+		display: block;
+		height: 0;
+		width: 0;
+		margin-top: -15px;
 	}
 }
 
@@ -162,6 +170,40 @@ h3, h4, h5, h6 {
 
 	@media screen and (max-width: 980px) {
 		grid-template-columns: 1fr;
+	}
+}
+
+.dropdown-box {
+	background-color: var(--background-color-50);
+	--filter: blur(20px);
+	backdrop-filter: var(--filter);
+	-webkit-backdrop-filter: var(--filter);
+	padding: var(--space-unit);
+	z-index: 10;
+	border-radius: var(--space-unit);
+}
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+	overflow: inherit;
+}
+
+input[type="text"] {
+	background-color: rgba(255, 255, 255, 0.1);
+	color: inherit;
+	border: solid transparent 1.5px;
+	border-radius: var(--border-radius-small);
+	padding-inline: 0.25rem;
+	padding-top: 0.05rem;
+
+	&:hover, &:focus-visible {
+		border-color: var(--text-color-highlight);
 	}
 }
 </style>
