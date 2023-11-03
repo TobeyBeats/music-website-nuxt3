@@ -14,6 +14,7 @@
 	padding-inline: 0.25rem;
 	padding-top: 0.08rem;
 	height: 1.45rem;
+	text-transform: capitalize;
 
 	.tag-hashtag {
 		font-weight: 700;

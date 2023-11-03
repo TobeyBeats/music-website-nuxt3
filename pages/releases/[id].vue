@@ -4,7 +4,15 @@
 	<div class="grid-default grid-2-1">
 		<div>
 			<p class="display-h2" style="margin-bottom: var(--space-unit);">{{ release.primaryArtists }}</p>
-			<p>{{ release.releaseDate.toLocaleDateString() }}</p>
+			<p style="margin-bottom: var(--space-unit);">{{ release.releaseDate.toLocaleDateString() }}</p>
+			<p>
+				<NuxtLink v-for="tagName in release.tags" :key="tagName"
+					:to="`/releases?tags=${tagName}`"
+					class="link"
+				>
+					<Tag :name="tagName" style="color: var(--text-color-highlight);" />
+				</NuxtLink>
+			</p>
 			<h2 style="display: none;">Links</h2>
 			<div style="margin-bottom: calc(var(--space-unit) * 3);"></div>
 			<div class="link-group">

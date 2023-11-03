@@ -78,7 +78,7 @@ h1, .display-h1 {
 	font-size: 40px;
 	font-weight: 800;
 	color: var(--text-color-highlight);
-	margin-bottom: calc(3 * var(--space-unit));
+	margin-bottom: calc(4 * var(--space-unit));
 
 	@media screen and (max-width: 420px) {
 		font-size: 34px;
@@ -201,7 +201,7 @@ input[type="text"] {
 	border-radius: var(--border-radius-small);
 	padding-inline: 0.25rem;
 	padding-top: 0.05rem;
-	height: 1.45rem;
+	height: 1.48rem;
 
 	&:hover, &:focus-visible {
 		border-color: var(--text-color-highlight);

@@ -9,6 +9,7 @@
 .tag {
 	white-space: nowrap;
 	margin-right: calc(var(--space-unit) / 3);
+	text-transform: capitalize;
 
 	.tag-hashtag {
 		margin-right: calc(var(--space-unit) / 8);
@@ -17,9 +18,6 @@
 	}
 
 	&.active {
-		// color: var(--text-color-default);
-		// background-color: rgba(255, 255, 255, 0.1);
-		// padding-inline: 0.25rem;
 		.tag-name {
 			font-weight: 800;
 		}
@@ -29,12 +27,13 @@
 
 <script setup lang="ts">
 const props = defineProps<{
-	name: string
+	name: string,
+	active?: boolean
 }>()
 
 const { currentRoute } = useRouter()
 
 function isActive() {
-	return currentRoute.value.query["tags"]?.includes(props.name)
+	return props.active || currentRoute.value.query["tags"]?.includes(props.name)
 }
 </script>

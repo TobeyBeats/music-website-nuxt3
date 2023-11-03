@@ -12,7 +12,7 @@
 				<h2 style="margin-bottom: calc(var(--space-unit) / 4);">{{ release.name }}</h2>
 				<p style="margin-bottom: calc(var(--space-unit) / 4);">{{ release.primaryArtists }}</p>
 				<p class="faded" style="margin-bottom: calc(var(--space-unit) / 4);">{{ release.releaseDate.toLocaleDateString() }}</p>
-				<p>
+				<p style="margin-bottom: calc(var(--space-unit) / 4);">
 					<Tag v-for="tagName in release.tags" :key="tagName" :name="tagName" />
 				</p>
 				<p style="margin-top: auto;"><span class="link">Listen now →</span></p>

@@ -51,7 +51,7 @@
 	display: flex;
 	flex-direction: row;
 	align-items: flex-end;
-	margin-bottom: calc(3 * var(--space-unit));
+	margin-bottom: calc(4 * var(--space-unit));
 	gap: var(--space-unit);
 
 	.releases-top-row-search-results {
