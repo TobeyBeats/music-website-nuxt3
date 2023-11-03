@@ -53,9 +53,14 @@
 						allowfullscreen></iframe>
 				</div>
 			</div>
-
-			<div style="margin-bottom: calc(var(--space-unit) * 3);"></div>
-
+		</div>
+		<div v-if="release.lyrics">
+			<h2>Lyrics</h2>
+			<p>Written by {{ release.lyricists.map(l => l.name).join(", ") }}</p>
+			<div style="margin-bottom: var(--space-unit);"></div>
+			<p class="lyrics" v-html="newLineToHtml(release.lyrics)"></p>
+		</div>
+		<div>
 			<h2>Contributors</h2>
 			<div style="
 				display: flex;
@@ -76,12 +81,6 @@
 					</p>
 				</div>
 			</div>
-		</div>
-		<div v-if="release.lyrics">
-			<h2>Lyrics</h2>
-			<p>Written by {{ release.lyricists.map(l => l.name).join(", ") }}</p>
-			<div style="margin-bottom: var(--space-unit);"></div>
-			<p class="lyrics" v-html="newLineToHtml(release.lyrics)"></p>
 		</div>
 	</div>
 </template>
@@ -116,13 +115,37 @@ const release = new Release(data.value)
 
 .grid-2-1 {
 	grid-template-columns: 1fr 1fr;
+	grid-template-rows: min-content 1fr;
+	grid-template-areas:
+		"top right"
+		"bottom right"
+	;
+
+	&>:nth-child(1) {
+		grid-column: top;
+		grid-row: top;
+	}
+	&>:nth-child(2) {
+		grid-column: right;
+		grid-row: right;
+	}
+	&>:nth-child(3) {
+		grid-column: bottom;
+		grid-row: bottom;
+	}
 
 	@media screen and (max-width: 1200px) {
-		grid-template-columns: 2fr 1fr;
+		grid-template-columns: 1fr auto;
 	}
 
 	@media screen and (max-width: 880px) {
 		grid-template-columns: 1fr;
+		grid-template-areas: 
+			"top"
+			"right"
+			"bottom"
+		;
+		grid-template-rows: auto;
 	}
 }
 </style>
