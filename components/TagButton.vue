@@ -12,7 +12,8 @@
 	background-color: hsla(0, 0%, 100%, 0.2);
 	cursor: pointer;
 	padding-inline: 0.25rem;
-	padding-top: 0.05rem;
+	padding-top: 0.08rem;
+	height: 1.45rem;
 
 	.tag-hashtag {
 		font-weight: 700;

@@ -201,6 +201,7 @@ input[type="text"] {
 	border-radius: var(--border-radius-small);
 	padding-inline: 0.25rem;
 	padding-top: 0.05rem;
+	height: 1.45rem;
 
 	&:hover, &:focus-visible {
 		border-color: var(--text-color-highlight);
