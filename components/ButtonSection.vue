@@ -1,8 +1,6 @@
 <template>
 	<NuxtLink :to="to">
-		<div class="button-section-wrapper" :class="to ? '' : 'disabled'" v-button-section style="
-			--active-color-1: red;
-		">
+		<div class="button-section-wrapper" :class="to ? '' : 'disabled'" v-button-section>
 			<div class="button-section-background-blur" :style="`
 				background-image: linear-gradient(to bottom right, ${colors[0]}, ${colors[1]});
 				`"></div>
