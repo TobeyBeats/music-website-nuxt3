@@ -16,22 +16,22 @@
 			<h2 style="display: none;">Links</h2>
 			<div style="margin-bottom: calc(var(--space-unit) * 3);"></div>
 			<div class="link-group">
-				<ButtonSection :to="release.links.spotify" :colors="[release.brightColors[0], release.brightColors[1]]">
+				<ButtonSection :to="release.links.spotify" :colors="[release.brightColors[0], release.brightColors[1]]" target="_blank">
 					<IconText :image-src="constants.assets.spotifyLogoWhite"><span class="link">Spotify ↗</span></IconText>
 				</ButtonSection>
-				<ButtonSection :to="release.links.amazon" :colors="[release.brightColors[0], release.brightColors[1]]">
+				<ButtonSection :to="release.links.amazon" :colors="[release.brightColors[0], release.brightColors[1]]" target="_blank">
 					<IconText :image-src="constants.assets.amazonLogoWhite"><span class="link">Amazon Music ↗</span></IconText>
 				</ButtonSection>
-				<ButtonSection :to="release.links.apple" :colors="[release.brightColors[0], release.brightColors[1]]">
+				<ButtonSection :to="release.links.apple" :colors="[release.brightColors[0], release.brightColors[1]]" target="_blank">
 					<IconText :image-src="constants.assets.appleMusicLogoWhite"><span class="link">Apple Music ↗</span></IconText>
 				</ButtonSection>
-				<ButtonSection :to="release.links.youtube" :colors="[release.brightColors[0], release.brightColors[1]]">
+				<ButtonSection :to="release.links.youtube" :colors="[release.brightColors[0], release.brightColors[1]]" target="_blank">
 					<IconText :image-src="constants.assets.youtubeLogoWhite"><span class="link">Youtube ↗</span></IconText>
 				</ButtonSection>
-				<ButtonSection :to="release.links.deezer" :colors="[release.brightColors[0], release.brightColors[1]]">
+				<ButtonSection :to="release.links.deezer" :colors="[release.brightColors[0], release.brightColors[1]]" target="_blank">
 					<IconText :image-src="constants.assets.deezerLogoWhite"><span class="link">Deezer ↗</span></IconText>
 				</ButtonSection>
-				<ButtonSection :to="release.links.soundcloud" :colors="[release.brightColors[0], release.brightColors[1]]">
+				<ButtonSection :to="release.links.soundcloud" :colors="[release.brightColors[0], release.brightColors[1]]" target="_blank">
 					<IconText :image-src="constants.assets.soundcloudLogoWhite"><span class="link">Soundcloud ↗</span></IconText>
 				</ButtonSection>
 			</div>

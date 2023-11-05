@@ -6,22 +6,22 @@
 				Artist Links
 			</h2>
 			<div class="link-group">
-				<ButtonSection to="" :colors="colorsDefault">
+				<ButtonSection :to="tobeybeatsLinks.spotify" :colors="colorsDefault" target="blank">
 					<IconText :image-src="constants.assets.spotifyLogoWhite"><span class="link">Spotify ↗</span></IconText>
 				</ButtonSection>
-				<ButtonSection to="" :colors="colorsDefault">
+				<ButtonSection :to="tobeybeatsLinks.amazon" :colors="colorsDefault" target="blank">
 					<IconText :image-src="constants.assets.amazonLogoWhite"><span class="link">Amazon Music ↗</span></IconText>
 				</ButtonSection>
-				<ButtonSection to="" :colors="colorsDefault">
+				<ButtonSection :to="tobeybeatsLinks.apple" :colors="colorsDefault" target="blank">
 					<IconText :image-src="constants.assets.appleMusicLogoWhite"><span class="link">Apple Music ↗</span></IconText>
 				</ButtonSection>
-				<ButtonSection to="" :colors="colorsDefault">
+				<ButtonSection :to="tobeybeatsLinks.youtube" :colors="colorsDefault" target="blank">
 					<IconText :image-src="constants.assets.youtubeLogoWhite"><span class="link">Youtube ↗</span></IconText>
 				</ButtonSection>
-				<ButtonSection to="" :colors="colorsDefault">
+				<ButtonSection :to="tobeybeatsLinks.deezer" :colors="colorsDefault" target="blank">
 					<IconText :image-src="constants.assets.deezerLogoWhite"><span class="link">Deezer ↗</span></IconText>
 				</ButtonSection>
-				<ButtonSection to="" :colors="colorsDefault">
+				<ButtonSection :to="tobeybeatsLinks.soundcloud" :colors="colorsDefault" target="blank">
 					<IconText :image-src="constants.assets.soundcloudLogoWhite"><span class="link">Soundcloud ↗</span></IconText>
 				</ButtonSection>
 			</div>
@@ -42,12 +42,29 @@ const colorsDefault: [string, string] = [constants.colorsDefault[0], constants.c
 
 const config = useRuntimeConfig()
 
-const { data, error } = await useFetch<ConstructorParameters<typeof Release>[0]>("/releases/under-water", {
+const { data: data1, error: error1 } = await useFetch<ConstructorParameters<typeof Release>[0]>("/releases/under-water", {
 	baseURL: config.public.baseUrlApi
 })
 
-if (!data.value) {
-	throw error
+if (!data1.value) {
+	throw error1
 }
-const release = new Release(data.value)
+const release = new Release(data1.value)
+
+const { data: data2, error: error2 } = await useFetch<{
+	spotify: string,
+	amazon: string,
+	apple: string,
+	youtube: string,
+	deezer: string,
+	soundcloud: string
+}>("/tobeybeats-links", {
+	baseURL: config.public.baseUrlApi
+})
+
+if (!data2.value) {
+	throw error2
+}
+
+const tobeybeatsLinks = data2.value
 </script>

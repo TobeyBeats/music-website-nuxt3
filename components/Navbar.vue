@@ -20,12 +20,12 @@
 				<NuxtLink to="/about" class="link">About</NuxtLink>
 			</li>
 			<li style="margin-left: auto;">
-				<a href="#">
+				<a :href="tobeybeatsLinks.discordServer" target="_blank">
 					<IconText :image-src="constants.assets.discordLogoWhite" class="link">Discord Server ↗</IconText>
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a :href="tobeybeatsLinks.instagram" target="_blank">
 					<IconText :image-src="constants.assets.instagramLogoWhite"></IconText>
 				</a>
 			</li>
@@ -50,12 +50,12 @@
 								<NuxtLink to="/about" class="link">About</NuxtLink>
 							</li>
 							<li>
-								<a href="#">
+								<a :href="tobeybeatsLinks.discordServer" target="_blank">
 									<IconText :image-src="constants.assets.discordLogoWhite" class="link">Discord Server ↗</IconText>
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a :href="tobeybeatsLinks.instagram" target="_blank">
 									<IconText :image-src="constants.assets.instagramLogoWhite" class="link">Instagram ↗</IconText>
 								</a>
 							</li>
@@ -71,8 +71,23 @@
 	</nav>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
+
+const config = useRuntimeConfig()
+
+const { data, error } = await useFetch<{
+	instagram: string,
+	discordServer: string
+}>("/tobeybeats-links", {
+	baseURL: config.public.baseUrlApi
+})
+
+if (!data.value) {
+	throw error
+}
+
+const tobeybeatsLinks = data.value
 </script>
 
 <style lang="scss">
