@@ -5,26 +5,7 @@
 			<h2 class="display-h1">
 				Artist Links
 			</h2>
-			<div class="link-group">
-				<ButtonSection :to="tobeybeatsLinks.spotify" :colors="colorsDefault" target="_blank">
-					<IconText :image-src="constants.assets.spotifyLogoWhite"><span class="link">Spotify ↗</span></IconText>
-				</ButtonSection>
-				<ButtonSection :to="tobeybeatsLinks.amazon" :colors="colorsDefault" target="_blank">
-					<IconText :image-src="constants.assets.amazonLogoWhite"><span class="link">Amazon Music ↗</span></IconText>
-				</ButtonSection>
-				<ButtonSection :to="tobeybeatsLinks.apple" :colors="colorsDefault" target="_blank">
-					<IconText :image-src="constants.assets.appleMusicLogoWhite"><span class="link">Apple Music ↗</span></IconText>
-				</ButtonSection>
-				<ButtonSection :to="tobeybeatsLinks.youtube" :colors="colorsDefault" target="_blank">
-					<IconText :image-src="constants.assets.youtubeLogoWhite"><span class="link">Youtube ↗</span></IconText>
-				</ButtonSection>
-				<ButtonSection :to="tobeybeatsLinks.deezer" :colors="colorsDefault" target="_blank">
-					<IconText :image-src="constants.assets.deezerLogoWhite"><span class="link">Deezer ↗</span></IconText>
-				</ButtonSection>
-				<ButtonSection :to="tobeybeatsLinks.soundcloud" :colors="colorsDefault" target="_blank">
-					<IconText :image-src="constants.assets.soundcloudLogoWhite"><span class="link">Soundcloud ↗</span></IconText>
-				</ButtonSection>
-			</div>
+			<LinkGroup :links="tobeybeatsLinks" :colors="colorsDefault" />
 		</section>
 
 		<section>

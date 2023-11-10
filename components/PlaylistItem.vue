@@ -10,14 +10,7 @@
 		">
 			<h2 style="margin-bottom: calc(var(--space-unit) / 4);">{{ playlist.name }}</h2>
 			<p style="margin-bottom: var(--space-unit);">{{ playlist.description }}</p>
-			<div class="playlist-item-links">
-				<ButtonSection :to="playlist.links.spotify" :colors="playlist.brightColors" target="_blank">
-					<IconText :image-src="constants.assets.spotifyLogoWhite"><span class="link">Spotify&nbsp;↗</span></IconText>
-				</ButtonSection>
-				<ButtonSection :to="playlist.links.spotify" :colors="playlist.brightColors" target="_blank">
-					<IconText :image-src="constants.assets.appleMusicLogoWhite"><span class="link">Apple&nbsp;Music&nbsp;↗</span></IconText>
-				</ButtonSection>
-			</div>
+			<LinkGroup :links="playlist.links" :colors="playlist.brightColors" :hide-button-if-inactive="true" class="playlist-item-links" />
 		</div>
 	</div>
 </template>
