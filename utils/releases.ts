@@ -1,3 +1,5 @@
+import type { MusicLinks } from "./utils"
+
 export class Contributor {
 	public name: string
 	public links: {
@@ -30,13 +32,7 @@ export class Release {
 	public lyrics: string
 	public released: boolean
 	public lyricists: Contributor[]
-	public links: {
-		spotify?: string,
-		youtube?: string,
-		soundcloud?: string,
-		apple?: string,
-		deezer?: string,
-		amazon?: string,
+	public links: MusicLinks & {
 		website: string,
 		presave?: string,
 		youtubeEmbeds?: string[]
@@ -55,13 +51,7 @@ export class Release {
 		brightColors?: string[],
 		tags?: string[],
 		lyrics?: string,
-		links: {
-			spotify?: string,
-			youtube?: string,
-			soundcloud?: string,
-			apple?: string,
-			deezer?: string,
-			amazon?: string,
+		links: MusicLinks & {
 			website: string,
 			presave?: string,
 			youtubeEmbeds?: string[]

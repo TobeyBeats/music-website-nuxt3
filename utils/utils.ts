@@ -14,3 +14,12 @@ export function setActiveColors(color1: string, color2: string) {
 		duration: 0
 })
 }
+
+export interface MusicLinks {
+	spotify?: string,
+	amazon?: string,
+	apple?: string,
+	youtube?: string,
+	deezer?: string,
+	soundcloud?: string
+}

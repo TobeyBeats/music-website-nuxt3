@@ -22,16 +22,10 @@
 </template>
 
 <script setup lang="ts">
-interface Links {
-	spotify?: string,
-	amazon?: string,
-	apple?: string,
-	youtube?: string,
-	deezer?: string,
-	soundcloud?: string
-}
+import type { MusicLinks } from '~/utils/utils';
+
 const { links, colors, hideButtonIfInactive = false } = defineProps<{
-	links: Links,
+	links: MusicLinks,
 	colors: [string, string],
 	hideButtonIfInactive?: boolean
 }>()

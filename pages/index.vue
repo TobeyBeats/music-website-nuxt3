@@ -19,6 +19,7 @@
 
 <script setup lang="ts">
 import { Release } from "~/utils/releases"
+import type { MusicLinks } from "~/utils/utils";
 const colorsDefault: [string, string] = [constants.colorsDefault[0], constants.colorsDefault[1]]
 
 const config = useRuntimeConfig()
@@ -32,14 +33,7 @@ if (!data1.value) {
 }
 const release = new Release(data1.value)
 
-const { data: data2, error: error2 } = await useFetch<{
-	spotify: string,
-	amazon: string,
-	apple: string,
-	youtube: string,
-	deezer: string,
-	soundcloud: string
-}>("/tobeybeats-links", {
+const { data: data2, error: error2 } = await useFetch<MusicLinks>("/tobeybeats-links", {
 	baseURL: config.public.baseUrlApi
 })
 
