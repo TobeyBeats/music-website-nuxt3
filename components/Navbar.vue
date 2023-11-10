@@ -13,10 +13,10 @@
 			<li>
 				<NuxtLink to="/releases" class="link">Releases</NuxtLink>
 			</li>
-			<li>
+			<li v-if="hasRoute('playlists')">
 				<NuxtLink to="/playlists" class="link">Playlists</NuxtLink>
 			</li>
-			<li>
+			<li v-if="hasRoute('about')">
 				<NuxtLink to="/about" class="link">About</NuxtLink>
 			</li>
 			<li style="margin-left: auto;">
@@ -43,10 +43,10 @@
 							<li>
 								<NuxtLink to="/releases" class="link">Releases</NuxtLink>
 							</li>
-							<li>
+							<li v-if="hasRoute('playlists')">
 								<NuxtLink to="/playlists" class="link">Playlists</NuxtLink>
 							</li>
-							<li>
+							<li v-if="hasRoute('about')">
 								<NuxtLink to="/about" class="link">About</NuxtLink>
 							</li>
 							<li>
@@ -72,8 +72,9 @@
 </template>
 
 <script setup lang="ts">
-import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
+import { Menu, MenuButton, MenuItems } from '@headlessui/vue'
 
+const { hasRoute } = useRouter()
 const config = useRuntimeConfig()
 
 const { data, error } = await useFetch<{
