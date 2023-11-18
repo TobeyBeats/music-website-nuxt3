@@ -55,10 +55,10 @@
 						<p>{{ participant.roles }}</p>
 					</div>
 					<p>
-						<span v-if="participant.contributor.links.instagram"><a class="link" :href="participant.contributor.links.instagram">Instagram</a> </span>
-						<span v-if="participant.contributor.links.youtube"><a class="link" :href="participant.contributor.links.youtube">Youtube</a> </span>
-						<span v-if="participant.contributor.links.spotify"><a class="link" :href="participant.contributor.links.spotify">Spotify</a> </span>
-						<span v-if="participant.contributor.links.website"><a class="link" :href="participant.contributor.links.website">Website</a></span>
+						<span v-if="participant.contributor.links.instagram"><a class="link" :href="participant.contributor.links.instagram">Instagram&nbsp;↗</a> </span>
+						<span v-if="participant.contributor.links.youtube"><a class="link" :href="participant.contributor.links.youtube">Youtube&nbsp;↗</a> </span>
+						<span v-if="participant.contributor.links.spotify"><a class="link" :href="participant.contributor.links.spotify">Spotify&nbsp;↗</a> </span>
+						<span v-if="participant.contributor.links.website"><a class="link" :href="participant.contributor.links.website">Website&nbsp;↗</a></span>
 					</p>
 				</div>
 			</div>
@@ -67,7 +67,7 @@
 </template>
 
 <script setup lang="ts">
-import { newLineToHtml, setActiveColors } from "~/utils/utils"
+import { newLineToHtml } from "~/utils/utils"
 
 const config = useRuntimeConfig()
 const route = useRoute()
