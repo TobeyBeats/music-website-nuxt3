@@ -18,7 +18,7 @@
 		<ButtonSection :to="links.soundcloud" :colors="colors" target="_blank" v-if="!hideButtonIfInactive || links.soundcloud">
 			<IconText :image-src="constants.assets.soundcloudLogoWhite"><span class="link">Soundcloud&nbsp;↗</span></IconText>
 		</ButtonSection>
-		<ButtonSection :to="links.soundcloud" :colors="colors" target="_blank" v-if="links.instagram">
+		<ButtonSection :to="links.instagram" :colors="colors" target="_blank" v-if="links.instagram">
 			<IconText :image-src="constants.assets.instagramLogoWhite"><span class="link">Instagram&nbsp;↗</span></IconText>
 		</ButtonSection>
 	</div>
