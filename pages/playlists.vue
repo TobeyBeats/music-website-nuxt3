@@ -22,13 +22,16 @@ import { type Playlist } from '~/utils/playlists';
 
 const config = useRuntimeConfig()
 
-const { data, error } = await useFetch<Playlist[]>("/playlists", {
+const { data, error } = config.public.baseUrlApi ? await useFetch<Playlist[]>("/playlists", {
 	baseURL: config.public.baseUrlApi
-})
-if (!data.value) {
+}) : { data: null, error: null }
+
+if (error?.value) {
 	throw error
 }
 
-const playlists = data.value
+const playlists = data && data.value ? data.value : [
+	{ name: 'Placeholder', description: 'Description', thumbnailUrl: '', brightColors: ['ffffff', 'ffffff'] as [string, string], links: { spotify: 'about:blank', apple: 'about:blank' } }
+]
 playlists.forEach(playlist => playlist.brightColors = playlist.brightColors.map(c => "#" + c) as [string, string])
 </script>

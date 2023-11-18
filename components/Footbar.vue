@@ -2,13 +2,13 @@
 	<footer id="footer">
 		<div id="footer-content">
 			<div>
-				<p>© 2023 TobeyBeats</p>
+				<p>© 2023 {{ $config.public.ownerArtistName }}</p>
 				<p>
 					<NuxtLink class="link" to="/privacy-policy">Privacy Policy</NuxtLink>
 				</p>
 			</div>
 			<div style="margin-left: auto; text-align: right;">
-				<p>Contact: <a class="link" href="mailto:contact@tobeybeats.com">contact@tobeybeats.com</a></p>
+				<p>Contact: <a class="link" :href="`mailto:${$config.public.ownerEmailAddress}`">{{ $config.public.ownerEmailAddress }}</a></p>
 			</div>
 		</div>
 	</footer>

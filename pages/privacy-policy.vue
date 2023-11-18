@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<h1>Privacy Policy</h1>
-		<p>Last updated: 10th September 2022</p>
+		<p>Last updated: 18th November 2023</p>
 		<p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure
 			of Your information when You use the Service and tells You about Your privacy rights and how the
 			law protects You.</p>
@@ -21,7 +21,7 @@
 			</li>
 			<li>
 				<p><strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;,
-					&quot;Us&quot; or &quot;Our&quot; in this Agreement) refers to TobeyBeats.</p>
+					&quot;Us&quot; or &quot;Our&quot; in this Agreement) refers to {{ $config.public.ownerArtistName }}.</p>
 			</li>
 			<li>
 				<p><strong>Cookies</strong> are small files that are placed on Your computer, mobile device
@@ -60,9 +60,9 @@
 					duration of a page visit).</p>
 			</li>
 			<li>
-				<p><strong>Website</strong> refers to TobeyBeats, accessible from <a
-						href="https://tobeybeats.com" rel="external nofollow noopener"
-						target="_blank">tobeybeats.com</a></p>
+				<p><strong>Website</strong> refers to {{ $config.public.ownerArtistName }}, accessible from <a
+						:href="$config.public.baseUrl" rel="external nofollow noopener"
+						target="_blank">{{ $config.public.baseUrl }}</a></p>
 			</li>
 			<li>
 				<p><strong>You</strong> means the individual accessing or using the Service, or the company,
@@ -310,7 +310,7 @@
 			Privacy Policy are effective when they are posted on this page.</p>
 		<h2>Contact Us</h2>
 		<p>If you have any questions about this Privacy Policy, You can contact us by email:</p>
-		<p>contact@tobeybeats.com</p>
+		<p>{{ $config.public.ownerEmailAddress }}</p>
 	</div>
 </template>
 

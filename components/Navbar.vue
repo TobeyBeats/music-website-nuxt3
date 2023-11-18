@@ -2,7 +2,7 @@
 	<nav id="navbar">
 		<ul id="navbar-content">
 			<li>
-				<p>TobeyBeats</p>
+				<p>{{ $config.public.ownerArtistName }}</p>
 			</li>
 			<li>
 				<p>—</p>
@@ -20,12 +20,12 @@
 				<NuxtLink to="/about" class="link">About</NuxtLink>
 			</li>
 			<li style="margin-left: auto;">
-				<a :href="tobeybeatsLinks.discordServer" target="_blank">
+				<a :href="ownerLinks.discordServer" target="_blank">
 					<IconText :image-src="constants.assets.discordLogoWhite" class="link">Discord Server ↗</IconText>
 				</a>
 			</li>
 			<li>
-				<a :href="tobeybeatsLinks.instagram" target="_blank">
+				<a :href="ownerLinks.instagram" target="_blank">
 					<IconText :image-src="constants.assets.instagramLogoWhite"></IconText>
 				</a>
 			</li>
@@ -33,7 +33,7 @@
 
 		<div id="navbar-collapse">
 			<Menu>
-				TobeyBeats
+				{{ $config.public.ownerArtistName }}
 				<Transition>
 					<MenuItems id="navbar-collapse-item-container">
 						<ul>
@@ -50,12 +50,12 @@
 								<NuxtLink to="/about" class="link">About</NuxtLink>
 							</li>
 							<li>
-								<a :href="tobeybeatsLinks.discordServer" target="_blank">
+								<a :href="ownerLinks.discordServer" target="_blank">
 									<IconText :image-src="constants.assets.discordLogoWhite" class="link">Discord Server ↗</IconText>
 								</a>
 							</li>
 							<li>
-								<a :href="tobeybeatsLinks.instagram" target="_blank">
+								<a :href="ownerLinks.instagram" target="_blank">
 									<IconText :image-src="constants.assets.instagramLogoWhite" class="link">Instagram ↗</IconText>
 								</a>
 							</li>
@@ -77,18 +77,18 @@ import { Menu, MenuButton, MenuItems } from '@headlessui/vue'
 const { hasRoute } = useRouter()
 const config = useRuntimeConfig()
 
-const { data, error } = await useFetch<{
+const { data, error } = config.public.ownerLinksPathApi && config.public.baseUrlApi ? await useFetch<{
 	instagram: string,
 	discordServer: string
-}>("/tobeybeats-links", {
+}>(config.public.ownerLinksPathApi, {
 	baseURL: config.public.baseUrlApi
-})
+}) : { data: null, error: null }
 
-if (!data.value) {
+if (error?.value) {
 	throw error
 }
 
-const tobeybeatsLinks = data.value
+const ownerLinks = data && data.value ? data.value : { instagram: 'about:blank', discordServer: 'about:blank' }
 </script>
 
 <style lang="scss">

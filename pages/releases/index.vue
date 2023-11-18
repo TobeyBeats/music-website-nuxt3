@@ -81,13 +81,21 @@ const { currentRoute, push } = useRouter()
 
 const config = useRuntimeConfig()
 
-const { data, error } = await useFetch<ConstructorParameters<typeof Release>[0][]>("/releases", {
+const { data } = config.public.baseUrlApi ? await useFetch<ConstructorParameters<typeof Release>[0][]>("/releases", {
 	baseURL: config.public.baseUrlApi
-})
+}) : { data: null }
 
 const releases = computed(() => {
-	if (!data.value) {
-		throw error
+	if (!data || !data.value) {
+		return [new Release({
+			name: 'Placeholder',
+			primaryArtists: 'No One',
+			releaseDate: new Date(6, 9, 1969),
+			thumbnailUrl: '',
+			tags: ['vocals', 'collaboration'],
+			links: {website: 'about:blank'},
+			participants: []
+		})]
 	}
 	return data.value.map(rawItem => new Release(rawItem)).filter(
 		release => getTagsQuery().every(

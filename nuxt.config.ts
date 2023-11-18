@@ -7,7 +7,10 @@ export default defineNuxtConfig({
 	runtimeConfig: {
 		public: {
 			baseUrl: process.env.BASE_URL,
-			baseUrlApi: process.env.BASE_URL_API
+			baseUrlApi: process.env.BASE_URL_API,
+			ownerLinksPathApi: process.env.OWNER_LINKS_PATH_API,
+			ownerArtistName: 'Artist Name',
+			ownerEmailAddress: 'artistname@mail'
 		}
 	}
 })
