@@ -9,11 +9,19 @@
 	</div>
 </template>
 
-<style>
+<style lang="scss">
 :root {
 	--max-content-width: 1420px;
 	--space-sides: 50px;
 	--navbar-height: 80px;
+
+	@media screen and (max-width: 380px) {
+		--space-sides: 42px;
+	}
+
+	@media screen and (max-width: 330px) {
+		--space-sides: 35px;
+	}
 }
 main {
 	max-width: var(--max-content-width);
