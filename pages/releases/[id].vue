@@ -87,6 +87,18 @@ if (!data.value) {
 }
 const release = new Release(data.value)
 
+
+useHead({
+	title: () => `${release.primaryArtists} – ${release.name}`
+})
+useSeoMeta({
+	title: () => `${release.primaryArtists} – ${release.name}`,
+	ogTitle: () => `${release.primaryArtists} – ${release.name}`,
+	description: () => `Listen to "${release.name}" by ${release.primaryArtists} on your favorite platform!`,
+	ogDescription: () => `Listen to "${release.name}" by ${release.primaryArtists} on your favorite platform!`,
+	ogUrl: () => `${config.public.baseUrl}${extractRelativePath(release.links.website)}`,
+	ogType: "music.album"
+})
 </script>
 
 <style lang="scss">

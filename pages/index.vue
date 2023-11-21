@@ -30,4 +30,16 @@
 <script setup lang="ts">
 import { Release } from "~/utils/releases"
 const colorsDefault: [string, string] = [constants.colorsDefault[0], constants.colorsDefault[1]]
+
+const config = useRuntimeConfig()
+
+useHead({
+	title: `${config.public.ownerArtistName} – Home`
+})
+useSeoMeta({
+	title: `${config.public.ownerArtistName} – Home`,
+	ogTitle: `${config.public.ownerArtistName} – Home`,
+	ogUrl: `${config.public.baseUrl}/`,
+	ogType: "website"
+})
 </script>
