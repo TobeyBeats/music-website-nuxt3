@@ -5,7 +5,7 @@
 		<div>
 			<p class="display-h2" style="margin-bottom: var(--space-unit);">{{ release.primaryArtists }}</p>
 			<p style="margin-bottom: var(--space-unit);">{{ release.releaseDate.toLocaleDateString() }}</p>
-			<p>
+			<p  style="margin-bottom: var(--space-unit);">
 				<NuxtLink v-for="tagName in release.tags" :key="tagName"
 					:to="`/releases?tags=${tagName}`"
 					class="link"
@@ -13,6 +13,7 @@
 					<Tag :name="tagName" style="color: var(--text-color-highlight);" />
 				</NuxtLink>
 			</p>
+			<img :src="extractRelativePath(release.thumbnailUrl)" alt="Cover Art" class="rounded squared box-shadow-default release-page-cover" />
 			<h2 style="display: none;">Links</h2>
 			<div style="margin-bottom: calc(var(--space-unit) * 3);"></div>
 			<LinkGroup :links="release.links" :colors="[release.brightColors[0], release.brightColors[1]]" />
@@ -68,6 +69,7 @@
 
 <script setup lang="ts">
 import { newLineToHtml } from "~/utils/utils"
+import { extractRelativePath } from "~/utils/utils"
 
 const config = useRuntimeConfig()
 const route = useRoute()
@@ -102,6 +104,14 @@ useSeoMeta({
 </script>
 
 <style lang="scss">
+.release-page-cover {
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	@media screen and (min-width: 500px) {
+		display: none;
+	}
+}
+
 .lyrics {
 	font-style: italic;
 }
