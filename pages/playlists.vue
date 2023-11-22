@@ -34,4 +34,17 @@ const playlists = data && data.value ? data.value : [
 	{ name: 'Placeholder', description: 'Description', thumbnailUrl: '', brightColors: ['ffffff', 'ffffff'] as [string, string], links: { spotify: 'about:blank', apple: 'about:blank' } }
 ]
 playlists.forEach(playlist => playlist.brightColors = playlist.brightColors.map(c => "#" + c) as [string, string])
+
+
+useHead({
+	title: `${config.public.ownerArtistName} – Playlist`
+})
+useSeoMeta({
+	title: `${config.public.ownerArtistName} – Playlist`,
+	ogTitle: `${config.public.ownerArtistName} – Playlist`,
+	description: `Listen to ${config.public.ownerArtistName}'s playlists!`,
+	ogDescription: `Listen to ${config.public.ownerArtistName}'s playlists!`,
+	ogUrl: `${config.public.baseUrl}/playlists`,
+	ogType: "website"
+})
 </script>

@@ -147,8 +147,8 @@ useHead({
 useSeoMeta({
 	title: `${config.public.ownerArtistName} – Releases`,
 	ogTitle: `${config.public.ownerArtistName} – Releases`,
-	description: `Listen to "${config.public.ownerArtistName}'s music releases on your favorite platform!`,
-	ogDescription: `Listen to "${config.public.ownerArtistName}'s music releases on your favorite platform!`,
+	description: `Listen to ${config.public.ownerArtistName}'s music releases on your favorite platform!`,
+	ogDescription: `Listen to ${config.public.ownerArtistName}'s music releases on your favorite platform!`,
 	ogUrl: `${config.public.baseUrl}/releases`,
 	ogType: "website"
 })
