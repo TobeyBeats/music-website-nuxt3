@@ -1,10 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-	devtools: { enabled: true },
-	css: [
+    devtools: { enabled: true },
+
+    css: [
 		'~/assets/fonts/Jost.css'
 	],
-	runtimeConfig: {
+
+    app: {
+		pageTransition: { name: 'page', mode: 'out-in' }
+	},
+
+    runtimeConfig: {
 		public: {
 			baseUrl: process.env.BASE_URL,
 			baseUrlApi: process.env.BASE_URL_API,
@@ -12,5 +18,7 @@ export default defineNuxtConfig({
 			ownerArtistName: 'Artist Name',
 			ownerEmailAddress: 'artistname@mail'
 		}
-	}
+	},
+
+    modules: ["@nuxt/image"]
 })

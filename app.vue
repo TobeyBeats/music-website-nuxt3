@@ -207,4 +207,16 @@ input[type="text"] {
 		border-color: var(--text-color-highlight);
 	}
 }
+
+.page-enter-from,
+.page-leave-to {
+	opacity: 0;
+	filter: blur(0.5rem);
+	-webkit-filter: blur(0.5rem);
+}
+
+.fade-enter-from,
+.fade-leave-to {
+	opacity: 0;
+}
 </style>

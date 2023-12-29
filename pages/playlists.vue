@@ -1,7 +1,9 @@
 <template>
-	<h1>Playlists</h1>
-	<div class="grid-playlists">
-		<PlaylistItem v-for="playlist in playlists" :key="playlist.name" :playlist="playlist" />
+	<div>
+		<h1>Playlists</h1>
+		<div class="grid-playlists">
+			<PlaylistItem v-for="playlist in playlists" :key="playlist.name" :playlist="playlist" />
+		</div>
 	</div>
 </template>
 

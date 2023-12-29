@@ -34,7 +34,7 @@
 		<div id="navbar-collapse">
 			<Menu>
 				{{ $config.public.ownerArtistName }}
-				<Transition>
+				<Transition name="fade">
 					<MenuItems id="navbar-collapse-item-container">
 						<ul>
 							<li>
@@ -172,13 +172,13 @@ $breakpoint: 880px;
 	border: none;
 	color: currentColor;
 	cursor: pointer;
-	font-size: 20px;
+	font-size: 1.5rem;
 	padding-bottom: 3px;
 	z-index: 10;
 	color: var(--text-color-highlight);
 
 	&:hover, &:focus-visible {
-		transform: scaleY(1.2);
+		transform: scaleY(1.5);
 	}
 }
 </style>

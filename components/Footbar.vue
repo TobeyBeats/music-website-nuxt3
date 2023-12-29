@@ -2,7 +2,7 @@
 	<footer id="footer">
 		<div id="footer-content">
 			<div>
-				<p>© 2023 {{ $config.public.ownerArtistName }}</p>
+				<p style="margin-bottom: calc(var(--space-unit) / 4);">© 2023 {{ $config.public.ownerArtistName }}</p>
 				<p>
 					<NuxtLink class="link" to="/privacy-policy">Privacy Policy</NuxtLink>
 				</p>

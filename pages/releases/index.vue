@@ -1,48 +1,52 @@
 <template>
-	<div class="releases-top-row">
-		<h1 style="margin-bottom: 0px;">Releases</h1>
-		<div class="releases-top-row-search-results">
-			<p v-if="getSearchInputQuery() || getTagsQuery()">
-				Search results:
-			</p>
-			<p v-if="getSearchInputQuery()">
-				"<span style="font-weight: 800;">{{ getSearchInputQuery() }}</span>"
-			</p>
-			<p>
-				<TagButton v-for="tagName in getTagsQuery()" :key="tagName" :name="tagName" />
-			</p>
+	<div>
+		<div class="releases-top-row">
+			<h1 style="margin-bottom: 0px;">Releases</h1>
+			<div class="releases-top-row-search-results">
+				<p v-if="getSearchInputQuery() || getTagsQuery()">
+					Search results:
+				</p>
+				<p v-if="getSearchInputQuery()">
+					"<span style="font-weight: 800;">{{ getSearchInputQuery() }}</span>"
+				</p>
+				<p>
+					<TagButton v-for="tagName in getTagsQuery()" :key="tagName" :name="tagName" />
+				</p>
+			</div>
+			<div style="
+				display: flex;
+				flex-direction: row;
+				gap: var(--space-unit);
+				align-items: center;
+				margin-bottom: -5px;
+			">
+				<input type="text" placeholder="Search Releases" class="display-p"
+					@change="pushSearchQuery"
+					:value="getSearchInputQuery()"
+				/>
+				<Menu as="div" style="position: relative;">
+					<MenuButton class="link">Tags ⏷</MenuButton>
+					<Transition name="fade">
+						<MenuItems class="dropdown-box box-shadow-default" style="
+							position: absolute;
+							right: 0;
+							top: calc(var(--space-unit) * 2);
+							display: flex;
+							flex-direction: column;
+							gap: calc(var(--space-unit) / 2);
+							align-items: start;
+						">
+							<MenuItem v-for="tagName in [...new Set(releases.map(r => r.tags || []).flat(1))]" :key="tagName">
+								<TagButton :name="tagName" style="margin-right: 0px;" />
+							</MenuItem>
+						</MenuItems>
+					</Transition>
+				</Menu>
+			</div>
 		</div>
-		<div style="
-			display: flex;
-			flex-direction: row;
-			gap: var(--space-unit);
-			align-items: center;
-			margin-bottom: -5px;
-		">
-			<input type="text" placeholder="Search Releases" class="display-p"
-				@change="pushSearchQuery"
-				:value="getSearchInputQuery()"
-			/>
-			<Menu as="div" style="position: relative;">
-				<MenuButton class="link">Tags ⏷</MenuButton>
-				<MenuItems class="dropdown-box box-shadow-default" style="
-					position: absolute;
-					right: 0;
-					top: calc(var(--space-unit) * 2);
-					display: flex;
-					flex-direction: column;
-					gap: calc(var(--space-unit) / 2);
-					align-items: start;
-				">
-					<MenuItem v-for="tagName in [...new Set(releases.map(r => r.tags || []).flat(1))]" :key="tagName">
-						<TagButton :name="tagName" style="margin-right: 0px;" />
-					</MenuItem>
-				</MenuItems>
-			</Menu>
+		<div class="grid-default">
+			<ReleaseItem :release="r" v-for="r in releases" :key="r.name" />
 		</div>
-	</div>
-	<div class="grid-default">
-		<ReleaseItem :release="r" v-for="r in releases" :key="r.name" />
 	</div>
 </template>
 

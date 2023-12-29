@@ -4,9 +4,11 @@
 			<slot />
 		</PopoverButton>
 
-		<PopoverPanel class="popover-body dropdown-box box-shadow-default">
-			<slot name="body" />
-		</PopoverPanel>
+		<Transition name="fade">
+			<PopoverPanel class="popover-body dropdown-box box-shadow-default">
+				<slot name="body" />
+			</PopoverPanel>
+		</Transition>
 	</Popover>
 </template>
 
