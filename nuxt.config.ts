@@ -19,6 +19,4 @@ export default defineNuxtConfig({
 			ownerEmailAddress: 'contact@tobeybeats.com'
 		}
 	},
-
-    modules: ["@nuxt/image"]
 })
