@@ -25,19 +25,21 @@
 			/>
 			<Menu as="div" style="position: relative;">
 				<MenuButton class="link">Tags ⏷</MenuButton>
-				<MenuItems class="dropdown-box box-shadow-default" style="
-					position: absolute;
-					right: 0;
-					top: calc(var(--space-unit) * 2);
-					display: flex;
-					flex-direction: column;
-					gap: calc(var(--space-unit) / 2);
-					align-items: start;
-				">
-					<MenuItem v-for="tagName in [...new Set(releasesAll.map(r => r.tags || []).flat(1))]" :key="tagName">
-						<TagButton :name="tagName" style="margin-right: 0px;" />
-					</MenuItem>
-				</MenuItems>
+				<Transition name="fade">
+					<MenuItems class="dropdown-box box-shadow-default" style="
+						position: absolute;
+						right: 0;
+						top: calc(var(--space-unit) * 2);
+						display: flex;
+						flex-direction: column;
+						gap: calc(var(--space-unit) / 2);
+						align-items: start;
+					">
+						<MenuItem v-for="tagName in [...new Set(releasesAll.map(r => r.tags || []).flat(1))]" :key="tagName">
+							<TagButton :name="tagName" style="margin-right: 0px;" />
+						</MenuItem>
+					</MenuItems>
+				</Transition>
 			</Menu>
 		</div>
 	</div>
