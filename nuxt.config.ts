@@ -19,6 +19,4 @@ export default defineNuxtConfig({
 			ownerEmailAddress: 'artistname@mail'
 		}
 	},
-
-    modules: ["@nuxt/image"]
 })
