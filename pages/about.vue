@@ -70,11 +70,11 @@
 							<p>
 
 								<span class="float-end floating-cover" style="display: inline-flex; flex-direction: column; gap: 1rem; margin-left: 0.5rem;">
-									<img src="/images/covers/rescue%20me%20cover.jpg" loading="lazy"
+									<img :src="'/images/covers/rescue%20me%20cover.jpg'" loading="lazy"
 										class="rounded shadow-std" />
-									<img src="/images/covers/alone in the dark cover.jpg" loading="lazy"
+									<img :src="'/images/covers/alone%20in%20the%20dark%20cover.jpg'" loading="lazy"
 										class="rounded shadow-std" />
-									<img src="/images/covers/Under%20Water%20Cover.jpeg" loading="lazy"
+									<img :src="'/images/covers/Under%20Water%20Cover.jpeg'" loading="lazy"
 										class="rounded shadow-std" />
 								</span>
 
