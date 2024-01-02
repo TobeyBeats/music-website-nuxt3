@@ -5,7 +5,7 @@
 			<h2 class="display-h1">
 				Artist Links
 			</h2>
-			<LinkGroup :links="tobeybeatsLinks" :colors="colorsDefault" />
+			<LinkGroup :links="feddersLinks" :colors="colorsDefault" />
 		</section>
 
 		<section>
@@ -31,7 +31,7 @@ if (!data1.value) {
 }
 const release = new Release(data1.value)
 
-const { data: data2, error: error2 } = await useFetch<MusicLinks>("/tobeybeats-links", {
+const { data: data2, error: error2 } = await useFetch<MusicLinks>("/fedders-links", {
 	baseURL: config.public.baseUrlApi
 })
 
@@ -39,7 +39,7 @@ if (!data2.value) {
 	throw error2
 }
 
-const tobeybeatsLinks = data2.value
+const feddersLinks = data2.value
 
 
 useHead({
