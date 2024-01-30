@@ -63,9 +63,9 @@
 							<h2>Discography – Overview</h2>
 							<p>
 								He's constantly trying out new genres, currently most of his releases go into the direction
-								of House in various subgenres, like his track <NuxtLink to="releases/karma" class="link">Karma&nbsp;→</NuxtLink>,
+								of House in various subgenres, like his track <NuxtLink to="releases/karma" class="link">Karma&nbsp;→&#xFE0E;</NuxtLink>,
 								and Future Bass / Melodic Bass, like
-								<NuxtLink to="/releases/rescue-me" class="link">Rescue&nbsp;Me&nbsp;→</NuxtLink>.
+								<NuxtLink to="/releases/rescue-me" class="link">Rescue&nbsp;Me&nbsp;→&#xFE0E;</NuxtLink>.
 							</p>
 							<p>
 
@@ -83,7 +83,7 @@
 								For the first time he realised the huge extent of the music community, which opened up the
 								doors for collaborating with musicians worldwide.<br />
 								In September 2021, he released his so far biggest project
-								<NuxtLink to="/releases/rescue-me" class="link">Rescue&nbsp;Me&nbsp;→</NuxtLink>,
+								<NuxtLink to="/releases/rescue-me" class="link">Rescue&nbsp;Me&nbsp;→&#xFE0E;</NuxtLink>,
 								which is a big collaboration together with producers
 								<ArtistPopover>Størm</ArtistPopover> from Bangladesh,
 								<ArtistPopover>Skyptomiax</ArtistPopover> from
@@ -94,27 +94,27 @@
 
 								He appreciated the exchange of ideas and inspiration of such collaborations so much, that he
 								worked together with other artists again on many songs,
-								like on <NuxtLink to="/releases/alone-in-the-dark" class="link">Alone&nbsp;In&nbsp;The&nbsp;Dark&nbsp;→</NuxtLink>
+								like on <NuxtLink to="/releases/alone-in-the-dark" class="link">Alone&nbsp;In&nbsp;The&nbsp;Dark&nbsp;→&#xFE0E;</NuxtLink>
 								with producer
 								<ArtistPopover>MAESTRI</ArtistPopover> from Austria and singer
 								<ArtistPopover>Sir David</ArtistPopover> from
 								Germany, released on OZLO
 								(<ArtistPopover>SWUTCH Music</ArtistPopover>),
-								and on <NuxtLink to="/releases/sad-songs" class="link">Sad&nbsp;Songs&nbsp;→</NuxtLink>, with
+								and on <NuxtLink to="/releases/sad-songs" class="link">Sad&nbsp;Songs&nbsp;→&#xFE0E;</NuxtLink>, with
 								<ArtistPopover>Taca Music</ArtistPopover>  from Norway and singer-songwriter
 								<ArtistPopover>Laryssa Vachon</ArtistPopover> from Canada, released on
 								<ArtistPopover>Stardust</ArtistPopover>.<br />
 								<br />
 
 								One of his latest releases, and his personal favorite release so far,
-								<NuxtLink to="/releases/under-water" class="link">Under&nbsp;Water&nbsp;→</NuxtLink>,
+								<NuxtLink to="/releases/under-water" class="link">Under&nbsp;Water&nbsp;→&#xFE0E;</NuxtLink>,
 								is a Deep Progressive House song together with singer-songwriter
 								<ArtistPopover>LizAnn</ArtistPopover> from
 								Switzerland. It has been in the works for many months and was released on 9th December 2022 via the label
 								<ArtistPopover>Gahara</ArtistPopover>.<br />
 							</p>
 							<p>
-								You can see all his latest and also upcoming music on the page <NuxtLink to="/releases" class="link">Releases&nbsp;→</NuxtLink>.
+								You can see all his latest and also upcoming music on the page <NuxtLink to="/releases" class="link">Releases&nbsp;→&#xFE0E;</NuxtLink>.
 							</p>
 						</div>
 						<div style="height: 100px;"></div>
