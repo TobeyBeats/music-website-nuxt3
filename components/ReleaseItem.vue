@@ -15,7 +15,7 @@
 				<p style="margin-bottom: calc(var(--space-unit) / 4);">
 					<Tag v-for="tagName in release.tags" :key="tagName" :name="tagName" />
 				</p>
-				<p style="margin-top: auto;"><span class="link">{{ props.release.released ? "Listen now →" : "Presave now →" }}</span></p>
+				<p style="margin-top: auto;"><span class="link">{{ props.release.released ? "Listen now →&#xFE0E;" : "Presave now →&#xFE0E;" }}</span></p>
 			</div>
 		</div>
 	</ButtonSection>

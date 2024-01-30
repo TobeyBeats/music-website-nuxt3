@@ -21,7 +21,7 @@
 			</li>
 			<li style="margin-left: auto;">
 				<a :href="ownerLinks.discordServer" target="_blank">
-					<IconText :image-src="constants.assets.discordLogoWhite" class="link">Discord Server ↗</IconText>
+					<IconText :image-src="constants.assets.discordLogoWhite" class="link">Discord Server ↗&#xFE0E;</IconText>
 				</a>
 			</li>
 			<li>
@@ -51,12 +51,12 @@
 							</li>
 							<li>
 								<a :href="ownerLinks.discordServer" target="_blank">
-									<IconText :image-src="constants.assets.discordLogoWhite" class="link">Discord Server ↗</IconText>
+									<IconText :image-src="constants.assets.discordLogoWhite" class="link">Discord Server ↗&#xFE0E;</IconText>
 								</a>
 							</li>
 							<li>
 								<a :href="ownerLinks.instagram" target="_blank">
-									<IconText :image-src="constants.assets.instagramLogoWhite" class="link">Instagram ↗</IconText>
+									<IconText :image-src="constants.assets.instagramLogoWhite" class="link">Instagram ↗&#xFE0E;</IconText>
 								</a>
 							</li>
 						</ul>
