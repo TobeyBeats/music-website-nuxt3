@@ -13,24 +13,33 @@
 						<Tag :name="tagName" style="color: var(--text-color-highlight);" />
 					</NuxtLink>
 				</p>
-				<img :src="extractRelativePath(release.thumbnailUrl)" alt="Cover Art" class="rounded squared box-shadow-default release-page-cover" />
-				<h2 style="display: none;">Links</h2>
-				<div style="margin-bottom: calc(var(--space-unit) * 3);"></div>
-				<LinkGroup :links="release.links" :colors="[release.brightColors[0], release.brightColors[1]]" />
-				<div style="margin-bottom: calc(var(--space-unit) * 3);"></div>
-				<h2 style="display: none;">Videos</h2>
-				<div style="
-					display: flex;
-					flex-direction: column;
-					gap: var(--space-unit);
-				">
-					<div v-for="embed in release.links.youtubeEmbeds" :key="embed" style="
-						aspect-ratio: 16 / 9;
-						max-width: 500px;
-					" class="rounded box-shadow-default">
-						<iframe width="100%" height="100%" :src="embed" frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen></iframe>
+				<div v-if="!release.released">
+					<iframe v-if="release.links.presave" :src="release.links.presave" frameborder="0" class="presave rounded box-shadow-default" />
+					<div v-else>
+						<img :src="extractRelativePath(release.thumbnailUrl)" alt="Cover Art" class="rounded squared box-shadow-default release-page-cover-always" />
+						<p>Presave coming soon.</p>
+					</div>
+				</div>
+				<div v-else>
+					<img :src="extractRelativePath(release.thumbnailUrl)" alt="Cover Art" class="rounded squared box-shadow-default release-page-cover" />
+					<h2 style="display: none;">Links</h2>
+					<div style="margin-bottom: calc(var(--space-unit) * 3);"></div>
+					<LinkGroup :links="release.links" :colors="[release.brightColors[0], release.brightColors[1]]" />
+					<div style="margin-bottom: calc(var(--space-unit) * 3);"></div>
+					<h2 style="display: none;">Videos</h2>
+					<div style="
+						display: flex;
+						flex-direction: column;
+						gap: var(--space-unit);
+					">
+						<div v-for="embed in release.links.youtubeEmbeds" :key="embed" style="
+							aspect-ratio: 16 / 9;
+							max-width: 500px;
+						" class="rounded box-shadow-default">
+							<iframe width="100%" height="100%" :src="embed" frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen></iframe>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -73,6 +82,29 @@ import { extractRelativePath } from "~/utils/utils"
 const config = useRuntimeConfig()
 const route = useRoute()
 
+// const release = new Release({
+// 	name: "Test Release",
+// 	primaryArtists: "Myself and everyone else",
+// 	thumbnailUrl: "https://tobeybeats.com/images/covers/Under%20Water%20Cover.jpeg",
+// 	releaseDate: "2025/01/01",
+// 	tags: ["nice", "superb"],
+// 	lyrics: "Es war einmal\neine Person",
+// 	links: {
+// 		website: "",
+// 		presave: "https://ffm.to/tobeybeats-lizann-under-water"
+// 	},
+// 	participants: [
+// 		{
+// 			displayName: "Myselfff",
+// 			roles: "Maker",
+// 			contributor: {
+// 				name: "Myself",
+// 				links: {}
+// 			}
+// 		}
+// 	]
+// })
+
 const { data, error } = await useFetch<ConstructorParameters<typeof Release>[0]>(`/releases/${route.params.id}`, {
 	baseURL: config.public.baseUrlApi
 })
@@ -114,8 +146,18 @@ useSeoMeta({
 	}
 }
 
+.release-page-cover-always {
+	width: min(100%, 20rem);
+	aspect-ratio: 1 / 1;
+}
+
 .lyrics {
 	font-style: italic;
+}
+
+iframe.presave {
+	width: 100%;
+	height: 50rem;
 }
 
 .grid-2-1 {
