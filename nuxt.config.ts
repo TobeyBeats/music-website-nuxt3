@@ -41,7 +41,8 @@ export default defineNuxtConfig({
 				"/releases/breakdown",
 				"/releases/under-water",
 				"/releases/sad-songs-remixes",
-				"/releases/fight-alone"
+				"/releases/fight-alone",
+				"/releases/4am"
 			]
 		}
 	},
