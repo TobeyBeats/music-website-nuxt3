@@ -40,7 +40,8 @@ const colorsDefault: [string, string] = [constants.colorsDefault[0], constants.c
 
 const vFollowCursor = {
 	mounted: (el: HTMLElement) => {
-		if ((window.innerWidth || 0) < 500 || (window.innerHeight || 0) < 500) {
+		console.log("WINDOW", window.innerWidth, window.innerHeight)
+		if ((window.innerWidth) < 500 || (window.innerHeight) < 500) {
 			el.animate({
 				left: "150px",
 				top: "150px",
