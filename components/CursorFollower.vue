@@ -40,6 +40,17 @@ const colorsDefault: [string, string] = [constants.colorsDefault[0], constants.c
 
 const vFollowCursor = {
 	mounted: (el: HTMLElement) => {
+		if ((window.innerWidth || 0) < 500 || (window.innerHeight || 0) < 500) {
+			el.animate({
+				left: "150px",
+				top: "150px",
+				opacity: "0.6"
+			}, {
+				duration: 0,
+				fill: "forwards"
+			})
+			return
+		}
 		window.addEventListener("mousemove", (event) => {
 			el.animate({
 				left: `${event.clientX}px`,
