@@ -19,4 +19,11 @@ export default defineNuxtConfig({
 			ownerEmailAddress: 'artistname@mail'
 		}
 	},
+	vite: {
+		server: {
+			hmr: {
+				overlay: false
+			}
+		}
+	}
 })
