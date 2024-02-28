@@ -16,11 +16,11 @@
 	--navbar-height: 80px;
 
 	@media screen and (max-width: 380px) {
-		--space-sides: 42px;
+		--space-sides: 35px;
 	}
 
 	@media screen and (max-width: 330px) {
-		--space-sides: 35px;
+		--space-sides: 30px;
 	}
 }
 main {

@@ -158,6 +158,11 @@ useSeoMeta({
 iframe.presave {
 	width: 100%;
 	height: 50rem;
+	@media screen and (max-width: 430px) {
+		width: 120%;
+		transform: scale(0.833);
+		transform-origin: top left;
+	}
 }
 
 .grid-2-1 {
