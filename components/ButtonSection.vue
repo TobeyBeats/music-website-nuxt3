@@ -13,21 +13,31 @@
 </template>
 
 <script setup lang="ts">
-import { setActiveColors } from '~/utils/utils';
+import { useActiveColors } from '~/utils/utils';
 
 const props = defineProps<{
 	to: string | undefined,
 	colors: [string, string]
 }>()
 
+
+const { setActiveColors, resetActiveColors } = useActiveColors()
+const mouseEnterHandler = (event: MouseEvent) => {
+	setActiveColors(props.colors[0], props.colors[1])
+}
+const mouseLeaveHandler = (event: MouseEvent) => {
+	resetActiveColors()
+}
+
 const vButtonSection = {
 	mounted: (el: HTMLElement) => {
-		el.addEventListener("mouseenter", (event) => {
-			setActiveColors(props.colors[0], props.colors[1])
-		})
-		el.addEventListener("mouseleave", (event) => {
-			setActiveColors(constants.colorsDefault[0], constants.colorsDefault[1])
-		})
+		el.addEventListener("mouseenter", mouseEnterHandler, { passive: true })
+		el.addEventListener("mouseleave", mouseLeaveHandler, { passive: true })
+	},
+	beforeUnmount: (el: HTMLElement) => {
+		el.removeEventListener("mouseenter", mouseEnterHandler)
+		el.removeEventListener("mouseleave", mouseLeaveHandler)
+		resetActiveColors()
 	}
 }
 </script>

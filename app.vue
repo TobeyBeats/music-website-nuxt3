@@ -7,7 +7,9 @@
 </template>
 
 <script setup lang="ts">
-import { setActiveColors } from './utils/utils';
+import { useActiveColors } from './utils/utils'
+
+const { setActiveColors } = useActiveColors()
 
 onMounted(() => setActiveColors(constants.colorsDefault[0], constants.colorsDefault[1]))
 </script>

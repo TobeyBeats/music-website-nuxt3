@@ -60,7 +60,7 @@ const vFollowCursor = {
 				duration: 2000,
 				fill: "forwards"
 			})
-		})
+		}, { passive: true })
 	}
 }
 </script>
