@@ -76,7 +76,7 @@
 </template>
 
 <script setup lang="ts">
-import { newLineToHtml } from "~/utils/utils"
+import { newLineToHtml, useActiveColors } from "~/utils/utils"
 import { extractRelativePath } from "~/utils/utils"
 
 const config = useRuntimeConfig()
@@ -119,6 +119,15 @@ if (!data.value) {
 	throw error
 }
 const release = new Release(data.value)
+
+
+const { setActiveColors, resetActiveColors } = useActiveColors()
+onMounted(() => {
+	setActiveColors(release.brightColors[0], release.brightColors[1])
+})
+onBeforeRouteLeave(() => {
+	resetActiveColors()
+})
 
 
 useHead({

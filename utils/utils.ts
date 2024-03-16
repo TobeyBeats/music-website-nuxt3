@@ -4,7 +4,7 @@ export function extractRelativePath(url: string): string {
 
 export const newLineToHtml = (s: string) => s.replace(/(?:\r\n|\r|\n)/g, "<br>")
 
-export function setActiveColors(color1: string, color2: string) {
+function setActiveColors(color1: string, color2: string) {
 	const root = document.querySelector(":root")
 	root?.animate({
 		'--active-color-1': color1,
@@ -12,7 +12,23 @@ export function setActiveColors(color1: string, color2: string) {
 	}, {
 		fill: "forwards",
 		duration: 0
-})
+	})
+}
+
+const activeColorsStack: [string, string][] = []
+
+export function useActiveColors() {
+	return {
+		setActiveColors: (color1: string, color2: string) => {
+			activeColorsStack.push([color1, color2])
+			setActiveColors(color1, color2)
+		},
+		resetActiveColors: () => {
+			activeColorsStack.pop()
+			const [color1, color2] = activeColorsStack[activeColorsStack.length - 1] || constants.colorsDefault
+			setActiveColors(color1, color2)
+		}
+	}
 }
 
 export interface MusicLinks {
