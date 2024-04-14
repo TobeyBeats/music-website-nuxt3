@@ -43,7 +43,6 @@
 	width: 40px;
 	height: 4px;
 	background-color: currentColor;
-	border-radius: 4px;
 	position: absolute;
 	transition-property: transform;
 	transition-duration: 0.15s;
