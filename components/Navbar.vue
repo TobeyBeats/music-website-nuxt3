@@ -32,22 +32,22 @@
 		</ul>
 
 		<div id="navbar-collapse">
-			<Menu v-slot="{ open }">
+			<Menu v-slot="{ open, close }">
 				{{ $config.public.ownerArtistName }}
 				<Transition name="fade">
 					<MenuItems id="navbar-collapse-item-container">
 						<ul>
 							<li>
-								<NuxtLink to="/" class="link">Home</NuxtLink>
+								<NuxtLink to="/" @click="close" class="link">Home</NuxtLink>
 							</li>
 							<li>
-								<NuxtLink to="/releases" class="link">Releases</NuxtLink>
+								<NuxtLink to="/releases" @click="close" class="link">Releases</NuxtLink>
 							</li>
 							<li v-if="hasRoute('playlists')">
-								<NuxtLink to="/playlists" class="link">Playlists</NuxtLink>
+								<NuxtLink to="/playlists" @click="close" class="link">Playlists</NuxtLink>
 							</li>
 							<li v-if="hasRoute('about')">
-								<NuxtLink to="/about" class="link">About</NuxtLink>
+								<NuxtLink to="/about" @click="close" class="link">About</NuxtLink>
 							</li>
 							<li>
 								<a :href="ownerLinks.discordServer" target="_blank">
