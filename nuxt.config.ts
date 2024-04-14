@@ -3,7 +3,8 @@ export default defineNuxtConfig({
     devtools: { enabled: true },
 
     css: [
-		'~/assets/fonts/Jost.css'
+		'~/assets/fonts/Jost.css',
+		'~/assets/hamburger.css',
 	],
 
     app: {

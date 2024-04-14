@@ -32,7 +32,7 @@
 		</ul>
 
 		<div id="navbar-collapse">
-			<Menu>
+			<Menu v-slot="{ open }">
 				{{ $config.public.ownerArtistName }}
 				<Transition name="fade">
 					<MenuItems id="navbar-collapse-item-container">
@@ -62,8 +62,10 @@
 						</ul>
 					</MenuItems>
 				</Transition>
-				<MenuButton class="menu-button">
-					≡
+				<MenuButton class="menu-button hamburger hamburger--slider" :class="open ? 'is-active' : ''">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
 				</MenuButton>
 
 			</Menu>
@@ -168,17 +170,19 @@ $breakpoint: 880px;
 
 .menu-button {
 	margin-left: auto;
-	background: none;
-	border: none;
-	color: currentColor;
-	cursor: pointer;
-	font-size: 1.5rem;
-	padding-bottom: 3px;
-	z-index: 10;
 	color: var(--text-color-highlight);
-
-	&:hover, &:focus-visible {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	.hamburger-box {
+		transform: scale(0.5);
+	}
+	transition: transform 0.3s;
+	&:not(.is-active):hover, &:not(.is-active):focus-visible {
 		transform: scaleY(1.5);
+	}
+	&:hover, &:focus-visible {
+		transform: scale(1.25);
 	}
 }
 </style>
