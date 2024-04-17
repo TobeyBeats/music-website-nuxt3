@@ -63,10 +63,10 @@
 							<p>{{ participant.roles }}</p>
 						</div>
 						<p>
-							<span v-if="participant.contributor.links.instagram"><a class="link" :href="participant.contributor.links.instagram">Instagram&nbsp;↗&#xFE0E;</a> </span>&ZeroWidthSpace;
-							<span v-if="participant.contributor.links.youtube"><a class="link" :href="participant.contributor.links.youtube">Youtube&nbsp;↗&#xFE0E;</a> </span>&ZeroWidthSpace;
-							<span v-if="participant.contributor.links.spotify"><a class="link" :href="participant.contributor.links.spotify">Spotify&nbsp;↗&#xFE0E;</a> </span>&ZeroWidthSpace;
-							<span v-if="participant.contributor.links.website"><a class="link" :href="participant.contributor.links.website">Website&nbsp;↗&#xFE0E;</a></span>
+							<span v-if="participant.contributor.links.instagram"><a class="link" target="_blank" :href="participant.contributor.links.instagram">Instagram&nbsp;↗&#xFE0E;</a> </span>&ZeroWidthSpace;
+							<span v-if="participant.contributor.links.youtube"><a class="link" target="_blank" :href="participant.contributor.links.youtube">Youtube&nbsp;↗&#xFE0E;</a> </span>&ZeroWidthSpace;
+							<span v-if="participant.contributor.links.spotify"><a class="link" target="_blank" :href="participant.contributor.links.spotify">Spotify&nbsp;↗&#xFE0E;</a> </span>&ZeroWidthSpace;
+							<span v-if="participant.contributor.links.website"><a class="link" target="_blank" :href="participant.contributor.links.website">Website&nbsp;↗&#xFE0E;</a></span>
 						</p>
 					</div>
 				</div>
