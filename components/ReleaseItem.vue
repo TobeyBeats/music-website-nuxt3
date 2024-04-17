@@ -15,7 +15,11 @@
 				<p style="margin-bottom: calc(var(--space-unit) / 4);">
 					<Tag v-for="tagName in release.tags" :key="tagName" :name="tagName" />
 				</p>
-				<p style="margin-top: auto;"><span class="link">{{ props.release.released ? "Listen now →&#xFE0E;" : "Presave now →&#xFE0E;" }}</span></p>
+				<p style="margin-top: auto;">
+					<NuxtLink class="link" :to="extractRelativePath(release.links.website)">
+						{{ props.release.released ? "Listen now →&#xFE0E;" : "Presave now →&#xFE0E;" }}
+					</NuxtLink>
+				</p>
 			</div>
 		</div>
 	</ButtonSection>
