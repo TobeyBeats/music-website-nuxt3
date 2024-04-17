@@ -42,7 +42,7 @@ html {
 	border: none;
 	overflow: visible;
 	transition: 0.3s ease;
-	transition-property: color, background-color, transform, opacity, position, text-decoration-color;
+	transition-property: color, background-color, border-color, transform, opacity, position, text-decoration-color;
 	text-decoration-color: transparent;
 	text-decoration-thickness: 1.5px;
 }
