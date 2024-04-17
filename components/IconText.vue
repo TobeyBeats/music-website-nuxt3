@@ -6,9 +6,9 @@
 		gap: 0.33rem;
 	">
 		<img :src="imageSrc" alt="" style="width: 27px; height: auto; aspect-ratio: 1 / 1;" />
-		<p v-if="$slots.default">
+		<span v-if="$slots.default">
 			<slot />
-		</p>
+		</span>
 	</span>
 </template>
 

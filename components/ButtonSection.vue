@@ -1,15 +1,16 @@
 <template>
-	<NuxtLink :to="to">
-		<div class="button-section-wrapper" :class="to ? '' : 'disabled'" v-button-section>
-			<div class="button-section-background-blur" :style="`
-				background-image: linear-gradient(to bottom right, ${colors[0]}, ${colors[1]});
-				`"></div>
-			<div class="button-section-background"></div>
-			<div style="position: relative; z-index: 1;">
-				<slot />
-			</div>
+	<div 
+		@click="async () => to ? await navigateTo(to, {external: true, open: {target: props.target || '_self'}}) : {}"
+		class="button-section-wrapper" :class="to ? '' : 'disabled'" v-button-section
+	>
+		<div class="button-section-background-blur" :style="`
+			background-image: linear-gradient(to bottom right, ${colors[0]}, ${colors[1]});
+			`"></div>
+		<div class="button-section-background"></div>
+		<div style="position: relative; z-index: 1;">
+			<slot />
 		</div>
-	</NuxtLink>
+	</div>
 </template>
 
 <script setup lang="ts">
@@ -17,6 +18,7 @@ import { useActiveColors } from '~/utils/utils';
 
 const props = defineProps<{
 	to: string | undefined,
+	target?: string | undefined,
 	colors: [string, string]
 }>()
 
@@ -49,6 +51,7 @@ const vButtonSection = {
 	position: relative;
 	padding: var(--background-padding);
 	margin: calc(0px - var(--background-padding));
+	cursor: pointer;
 
 	&.disabled {
 		opacity: 0.75;
