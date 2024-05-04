@@ -16,12 +16,12 @@
 				<div v-if="!release.released">
 					<iframe v-if="release.links.presave" :src="release.links.presave" frameborder="0" class="presave rounded box-shadow-default" />
 					<div v-else>
-						<img :src="extractRelativePath(release.thumbnailUrl)" alt="Cover Art" class="rounded squared box-shadow-default release-page-cover-always" />
+						<img :src="release.thumbnailUrl" alt="Cover Art" class="rounded squared box-shadow-default release-page-cover-always" />
 						<p>Presave coming soon.</p>
 					</div>
 				</div>
 				<div v-else>
-					<img :src="extractRelativePath(release.thumbnailUrl)" alt="Cover Art" class="rounded squared box-shadow-default release-page-cover" />
+					<img :src="release.thumbnailUrl" alt="Cover Art" class="rounded squared box-shadow-default release-page-cover" />
 					<h2 style="display: none;">Links</h2>
 					<div style="margin-bottom: calc(var(--space-unit) * 3);"></div>
 					<LinkGroup :links="release.links" :colors="[release.brightColors[0], release.brightColors[1]]" />
