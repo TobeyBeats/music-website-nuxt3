@@ -1,6 +1,6 @@
 <template>
 	<div class="playlist-item">
-		<img :src="extractRelativePath(playlist.thumbnailUrl)" width="250" height="250" alt="Cover Art" class="rounded squared box-shadow-default"
+		<img :src="playlist.thumbnailUrl" width="250" height="250" alt="Cover Art" class="rounded squared box-shadow-default"
 			style="min-width: 250px;"
 		/>
 		<div style="
@@ -17,7 +17,6 @@
 
 <script setup lang="ts">
 import { type Playlist } from "~/utils/playlists"
-import { extractRelativePath } from "~/utils/utils"
 const props = defineProps<{
 	playlist: Playlist
 }>()

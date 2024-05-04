@@ -1,7 +1,7 @@
 <template>
 	<ButtonSection :to="extractRelativePath(release.links.website)" :colors="[release.brightColors[0], release.brightColors[1]]">
 		<div class="release-item">
-			<img :src="extractRelativePath(release.thumbnailUrl)" width="200" height="200" alt="Cover Art" class="rounded squared box-shadow-default"
+			<img :src="release.thumbnailUrl" width="200" height="200" alt="Cover Art" class="rounded squared box-shadow-default"
 				style="min-width: 200px;"
 			/>
 			<div style="
