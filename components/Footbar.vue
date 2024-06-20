@@ -2,13 +2,20 @@
 	<footer id="footer">
 		<div id="footer-content">
 			<div>
-				<p style="margin-bottom: calc(var(--space-unit) / 4);">© 2023 {{ $config.public.ownerArtistName }}</p>
+				<p style="margin-bottom: calc(var(--space-unit) / 4);">© 2024 {{ $config.public.ownerArtistName }}</p>
+				<p>
+					<a href="https://tobeybeats.com/releases" class="link">Switch to TobeyBeats ↗&#xFE0E;</a>
+				</p>
+			</div>
+			<div style="margin-left: auto">
+				<p style="margin-bottom: calc(var(--space-unit) / 4);">Contact:
+					<a class="link" :href="`mailto:${$config.public.ownerEmailAddress}`">
+						{{ $config.public.ownerEmailAddress }}
+					</a>
+				</p>
 				<p>
 					<NuxtLink class="link" to="/privacy-policy">Privacy Policy</NuxtLink>
 				</p>
-			</div>
-			<div style="margin-left: auto; text-align: right;">
-				<p>Contact: <a class="link" :href="`mailto:${$config.public.ownerEmailAddress}`">{{ $config.public.ownerEmailAddress }}</a></p>
 			</div>
 		</div>
 	</footer>
