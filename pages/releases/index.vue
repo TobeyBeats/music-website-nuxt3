@@ -42,25 +42,25 @@
 					</MenuItems>
 				</Transition>
 			</Menu>
-			<a href="https://tobeybeats.com/releases" class="link">Switch to TobeyBeats ↗&#xFE0E;</a>
+			<a href="https://feddersmusic.com/releases" class="link">Switch to Fedders ↗&#xFE0E;</a>
 		</div>
 	</div>
-	<p class="display-h2" v-if="releasesFedders.length === 0" style="margin-block: 0px;">No search results in this section.</p>
+	<p class="display-h2" v-if="releasesTobeyBeats.length === 0" style="margin-block: 0px;">No search results in this section.</p>
 	<div class="grid-default">
-		<ReleaseItem :release="r" v-for="r in releasesFedders" :key="r.name" />
+		<ReleaseItem :release="r" v-for="r in releasesTobeyBeats" :key="r.name" />
 	</div>
 	<p class="display-h2" style="margin-block: calc(var(--space-unit) * 4); font-size: 2rem;">
 		Releases as
 		<Popover>
-			TobeyBeats&ZeroWidthSpace;<sup style="font-size: 1.5rem; opacity: 0.75;">ℹ</sup>
+			Fedders&ZeroWidthSpace;<sup style="font-size: 1.5rem; opacity: 0.75;">ℹ</sup>
 			<template #body>
-				<p class="display-p" style="background-color: transparent;">TobeyBeats is Fedders' old alias, now used as side project.</p>
+				<p class="display-p" style="background-color: transparent;">Fedders is TobeyBeats' new alias, now used as main project in addition to TobeyBeats.</p>
 			</template>
 		</Popover>
 	</p>
-	<p class="display-h2" v-if="releasesTobeyBeats.length === 0" style="margin-block: 0px;">No search results in this section.</p>
+	<p class="display-h2" v-if="releasesFedders.length === 0" style="margin-block: 0px;">No search results in this section.</p>
 	<div class="grid-default">
-		<ReleaseItem :release="r" v-for="r in releasesTobeyBeats" :key="r.name" />
+		<ReleaseItem :release="r" v-for="r in releasesFedders" :key="r.name" />
 	</div>
 </template>
 

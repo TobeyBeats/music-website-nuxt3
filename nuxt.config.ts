@@ -16,7 +16,7 @@ export default defineNuxtConfig({
 			baseUrl: process.env.BASE_URL,
 			baseUrlApi: process.env.BASE_URL_API,
 			ownerLinksPathApi: process.env.OWNER_LINKS_PATH_API,
-			ownerArtistName: 'Fedders',
+			ownerArtistName: 'TobeyBeats',
 			ownerEmailAddress: 'general@feddersmusic.com'
 		}
 	},

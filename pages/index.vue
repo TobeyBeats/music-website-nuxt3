@@ -5,7 +5,7 @@
 			<h2 class="display-h1">
 				Artist Links
 			</h2>
-			<LinkGroup :links="feddersLinks" :colors="colorsDefault" />
+			<LinkGroup :links="tobeybeatsLinks" :colors="colorsDefault" />
 		</section>
 
 		<section>
@@ -22,7 +22,7 @@ const colorsDefault: [string, string] = [constants.colorsDefault[0], constants.c
 
 const config = useRuntimeConfig()
 
-const { data: data1, error: error1 } = await useFetch<ConstructorParameters<typeof Release>[0]>("/releases/riders-of-the-storm", {
+const { data: data1, error: error1 } = await useFetch<ConstructorParameters<typeof Release>[0]>("/releases/fight-alone", {
 	baseURL: config.public.baseUrlApi
 })
 
@@ -31,7 +31,7 @@ if (!data1.value) {
 }
 const release = new Release(data1.value)
 
-const { data: data2, error: error2 } = await useFetch<MusicLinks>("/fedders-links", {
+const { data: data2, error: error2 } = await useFetch<MusicLinks>("/tobeybeats-links", {
 	baseURL: config.public.baseUrlApi
 })
 
@@ -39,7 +39,7 @@ if (!data2.value) {
 	throw error2
 }
 
-const feddersLinks = data2.value
+const tobeybeatsLinks = data2.value
 
 
 useHead({
