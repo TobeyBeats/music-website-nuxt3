@@ -18,13 +18,14 @@
 			gap: var(--space-unit);
 			align-items: center;
 			margin-bottom: -5px;
+			flex-wrap: wrap;
 		">
 			<input type="text" placeholder="Search Releases" class="display-p"
 				@change="pushSearchQuery"
 				:value="getSearchInputQuery()"
 			/>
 			<Menu as="div" style="position: relative;">
-				<MenuButton class="link">Tags ⏷</MenuButton>
+				<MenuButton class="link" style="margin-right: var(--space-unit)">Tags ⏷</MenuButton>
 				<Transition name="fade">
 					<MenuItems class="dropdown-box box-shadow-default" style="
 						position: absolute;
@@ -41,6 +42,7 @@
 					</MenuItems>
 				</Transition>
 			</Menu>
+			<a href="https://tobeybeats.com/releases" class="link">Switch to TobeyBeats ↗&#xFE0E;</a>
 		</div>
 	</div>
 	<p class="display-h2" v-if="releasesFedders.length === 0" style="margin-block: 0px;">No search results in this section.</p>
