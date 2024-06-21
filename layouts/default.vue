@@ -31,6 +31,7 @@
 
 	@media screen and (max-width: 330px) {
 		--space-sides: 30px;
+		--footbar-height: 140px;
 	}
 }
 main {
@@ -38,6 +39,6 @@ main {
 	padding-inline: var(--space-sides);
 	margin-top: calc(var(--navbar-height) + var(--space-sides));
 	margin-inline: auto;
-	padding-bottom: calc(var(--navbar-height) + var(--space-sides));
+	padding-bottom: calc(var(--footbar-height) + var(--space-sides));
 }
 </style>

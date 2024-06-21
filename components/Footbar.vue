@@ -14,7 +14,7 @@
 					</a>
 				</p>
 				<p>
-					<NuxtLink class="link" to="/privacy-policy">Privacy Policy</NuxtLink>
+					<NuxtLink class="link" to="/privacy-policy">Privacy Policy&nbsp;→&#xFE0E;</NuxtLink>
 				</p>
 			</div>
 		</div>
@@ -23,7 +23,7 @@
 
 <style lang="scss">
 #footer {
-	height: var(--navbar-height);
+	height: var(--footbar-height);
 	width: 100%;
 	background-color: var(--background-color-25);
 	--blur-amount: 10px;
