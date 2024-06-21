@@ -12,7 +12,7 @@
 			<h2 class="display-h1">
 				New Release
 			</h2>
-			<ReleaseItem :release="release" />
+			<ReleaseItem :release="release"  style="margin-top: -2rem;" />
 		</section>
 	</div>
 </template>
