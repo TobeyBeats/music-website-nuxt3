@@ -14,7 +14,7 @@
 					</a>
 				</p>
 				<p>
-					<NuxtLink class="link" to="/privacy-policy">Privacy Policy</NuxtLink>
+					<NuxtLink class="link" to="/privacy-policy">Privacy Policy&nbsp;↗&#xFE0E;</NuxtLink>
 				</p>
 			</div>
 		</div>
