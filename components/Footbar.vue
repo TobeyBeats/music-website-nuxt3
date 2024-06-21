@@ -4,7 +4,7 @@
 			<div>
 				<p style="margin-bottom: calc(var(--space-unit) / 4);">© 2023 {{ $config.public.ownerArtistName }}</p>
 				<p>
-					<NuxtLink class="link" to="/privacy-policy">Privacy Policy</NuxtLink>
+					<NuxtLink class="link" to="/privacy-policy">Privacy Policy&nbsp;↗&#xFE0E;</NuxtLink>
 				</p>
 			</div>
 			<div style="margin-left: auto; text-align: right;">
