@@ -14,9 +14,19 @@
 	--max-content-width: 1420px;
 	--space-sides: 50px;
 	--navbar-height: 80px;
+	--footbar-height: 80px;
+
+	@media screen and (max-width: 550px) {
+		--footbar-height: 100px;
+	}
+
+	@media screen and (max-width: 440px) {
+		--footbar-height: 120px;
+	}
 
 	@media screen and (max-width: 380px) {
 		--space-sides: 35px;
+		--footbar-height: 140px;
 	}
 
 	@media screen and (max-width: 330px) {
