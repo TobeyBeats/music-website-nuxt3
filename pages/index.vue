@@ -14,7 +14,7 @@
 				<h2 class="display-h1">
 					New Release
 				</h2>
-				<ReleaseItem :release="new Release({
+				<ReleaseItem style="margin-top: -2rem;" :release="new Release({
 					name: 'Placeholder',
 					primaryArtists: 'No One',
 					releaseDate: new Date(6, 9, 1969),
