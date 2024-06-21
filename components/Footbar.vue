@@ -2,7 +2,7 @@
 	<footer id="footer">
 		<div id="footer-content">
 			<div>
-				<p style="margin-bottom: calc(var(--space-unit) / 4);">© 2023 {{ $config.public.ownerArtistName }}</p>
+				<p style="margin-bottom: calc(var(--space-unit) / 4);">© 2024 {{ $config.public.ownerArtistName }}</p>
 				<p>
 					<a href="https://feddersmusic.com/releases" class="link">Switch to Fedders ↗&#xFE0E;</a>
 				</p>
