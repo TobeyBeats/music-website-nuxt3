@@ -16,7 +16,7 @@
 
 <style lang="scss">
 #footer {
-	height: var(--navbar-height);
+	height: var(--footbar-height);
 	width: 100%;
 	background-color: var(--background-color-25);
 	--blur-amount: 10px;
