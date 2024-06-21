@@ -46,6 +46,8 @@ export default defineNuxtConfig({
 				"/releases/4am",
 				"/releases/problems",
 				"/releases/riders-of-the-storm",
+				"/releases/feel-alive",
+				"/releases/big-room-bang",
 			]
 		}
 	},
