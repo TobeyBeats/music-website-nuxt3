@@ -4,7 +4,7 @@
 			<div>
 				<p style="margin-bottom: calc(var(--space-unit) / 4);">© 2024 {{ $config.public.ownerArtistName }}</p>
 				<p>
-					<a href="https://tobeybeats.com/releases" class="link">Switch to TobeyBeats ↗&#xFE0E;</a>
+					<a href="https://tobeybeats.com/releases" class="link">Switch to TobeyBeats&nbsp;↗&#xFE0E;</a>
 				</p>
 			</div>
 			<div style="margin-left: auto">
