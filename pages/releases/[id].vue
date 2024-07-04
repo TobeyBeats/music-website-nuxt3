@@ -139,7 +139,7 @@ useSeoMeta({
 	description: () => `Listen to "${release.name}" by ${release.primaryArtists} on your favorite platform!`,
 	ogDescription: () => `Listen to "${release.name}" by ${release.primaryArtists} on your favorite platform!`,
 	ogUrl: `${config.public.baseUrl}${extractRelativePath(release.links.website)}`,
-	ogImage: `${config.public.baseUrl}${extractRelativePath(release.thumbnailUrl)}`,
+	ogImage: release.thumbnailUrl,
 	ogImageHeight: 2000,
 	ogImageWidth: 2000,
 	ogType: "music.album"
