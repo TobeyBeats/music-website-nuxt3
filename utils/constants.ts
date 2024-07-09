@@ -9,5 +9,5 @@ export default {
 		spotifyLogoWhite: "/images/icons/spotify%20white.svg",
 		youtubeLogoWhite: "/images/icons/youtube%20white.svg",
 	},
-	colorsDefault: ["#BFE3FC", "#9FACCD"]
+	colorsDefault: ["#BBBBBB", "#B0B0B0"]
 }
