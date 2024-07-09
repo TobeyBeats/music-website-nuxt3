@@ -8,7 +8,9 @@
 				</p>
 			</div>
 			<div style="margin-left: auto; text-align: right;">
-				<p>Contact: <a class="link" :href="`mailto:${$config.public.ownerEmailAddress}`">{{ $config.public.ownerEmailAddress }}</a></p>
+				<p>
+					<NuxtLink class="link" to="/contact">Contact&nbsp;→&#xFE0E;</NuxtLink>
+				</p>
 			</div>
 		</div>
 	</footer>

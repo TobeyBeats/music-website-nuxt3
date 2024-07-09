@@ -17,7 +17,18 @@ export default defineNuxtConfig({
 			baseUrlApi: process.env.BASE_URL_API,
 			ownerLinksPathApi: process.env.OWNER_LINKS_PATH_API,
 			ownerArtistName: 'Artist Name',
-			ownerEmailAddress: 'artistname@mail'
+			contact: [
+				{
+					type: 'General Inquiries',
+					uri: 'mailto:general@artist.com',
+					display: 'general@artist.com',
+				},
+				{
+					type: 'Promos',
+					uri: 'mailto:promo@artist.com',
+					display: 'promo@artist.com',
+				},
+			]
 		}
 	},
 	vite: {
