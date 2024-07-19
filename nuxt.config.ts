@@ -64,6 +64,7 @@ export default defineNuxtConfig({
 				"/releases/riders-of-the-storm",
 				"/releases/feel-alive",
 				"/releases/big-room-bang",
+				"/releases/greedy"
 			]
 		}
 	},
