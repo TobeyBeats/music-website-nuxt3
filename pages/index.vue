@@ -22,7 +22,7 @@ const colorsDefault: [string, string] = [constants.colorsDefault[0], constants.c
 
 const config = useRuntimeConfig()
 
-const { data: data1, error: error1 } = await useFetch<ConstructorParameters<typeof Release>[0]>("/releases/greedy", {
+const { data: data1, error: error1 } = await useFetch<ConstructorParameters<typeof Release>[0]>("/releases/who-do-you-love", {
 	baseURL: config.public.baseUrlApi
 })
 
