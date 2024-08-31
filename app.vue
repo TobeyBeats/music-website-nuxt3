@@ -222,4 +222,13 @@ input[type="text"] {
 .fade-leave-to {
 	opacity: 0;
 }
+
+
+// Primevue Overrides
+
+.p-popover {
+	&:before, &:after {
+		display: none;
+	}
+}
 </style>

@@ -1,34 +1,36 @@
 <template>
-	<Popover>
-		<slot />
-		<template #body>
-			<div>
-				<LinkGroup :links="contributor.links" :colors="[constants.colorsDefault[0], constants.colorsDefault[1]]" :hide-button-if-inactive="true" />
-			</div>
-		</template>
+	<Popover ref="popover">
+		<div v-if="contributor" class="dropdown-box box-shadow-default">
+			<LinkGroup :links="contributor.links" :colors="[constants.colorsDefault[0], constants.colorsDefault[1]]" :hide-button-if-inactive="true" />
+		</div>
 	</Popover>
 </template>
 
 
 <script setup lang="ts">
-import { useSlots } from "vue";
+import Popover from "primevue/popover"
+
+const popover = ref<InstanceType<typeof Popover>>()
 
 const config = useRuntimeConfig()
-const slots = useSlots()
 
-if (!slots.default) {
-	throw new Error("default slot is empty")
-}
+const contributor = ref<Contributor | null>(null)
 
-const { data, error } = await useFetch<Contributor[]>("/contributors", {
-	baseURL: config.public.baseUrlApi,
-	query: {
-		name: slots.default()[0].children
+defineExpose({
+	show: (event: MouseEvent, name: string) => {
+		const target = event.target
+		$fetch<Contributor[]>(`/contributors`, {
+			baseURL: config.public.baseUrlApi,
+			query: {
+				name
+			}
+		}).then(contributors => {
+			contributor.value = contributors[0]
+			if (popover.value) {
+				popover.value.show(event, target)
+			}
+		})
 	}
 })
-if (!data.value) {
-	throw error
-}
-const contributor = data.value[0]
 
 </script>

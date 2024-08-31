@@ -11,8 +11,12 @@
   "devDependencies": {
     "@headlessui/vue": "^1.7.16",
     "@nuxt/devtools": "latest",
+    "@primevue/nuxt-module": "^4.0.5",
     "nuxt": "^3.8.0",
     "sass": "^1.66.1",
     "sass-loader": "^13.3.2"
+  },
+  "dependencies": {
+    "primevue": "^4.0.5"
   }
 }
