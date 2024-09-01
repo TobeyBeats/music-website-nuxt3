@@ -21,15 +21,19 @@
 		<ButtonSection :to="links.instagram" :colors="colors" target="_blank" v-if="links.instagram">
 			<IconText :image-src="constants.assets.instagramLogoWhite"><span class="link">Instagram&nbsp;↗&#xFE0E;</span></IconText>
 		</ButtonSection>
+		<ButtonSection :to="links.website" :colors="colors" target="_blank" v-if="withWebsite && links.website">
+			<IconText :image-src="constants.assets.websiteIconWhite"><span class="link">Website&nbsp;↗&#xFE0E;</span></IconText>
+		</ButtonSection>
 	</div>
 </template>
 
 <script setup lang="ts">
 import type { MusicLinks } from '~/utils/utils';
 
-const { links, colors, hideButtonIfInactive = false } = defineProps<{
-	links: MusicLinks & { instagram?: string },
+const { links, colors, hideButtonIfInactive = false, withWebsite = false } = defineProps<{
+	links: MusicLinks & { instagram?: string } & { website?: string },
 	colors: [string, string],
-	hideButtonIfInactive?: boolean
+	hideButtonIfInactive?: boolean,
+	withWebsite?: boolean
 }>()
 </script>

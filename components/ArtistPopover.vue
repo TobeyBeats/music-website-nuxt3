@@ -1,7 +1,7 @@
 <template>
 	<Popover ref="popover">
 		<div v-if="contributor" class="dropdown-box box-shadow-default">
-			<LinkGroup :links="contributor.links" :colors="[constants.colorsDefault[0], constants.colorsDefault[1]]" :hide-button-if-inactive="true" />
+			<LinkGroup :links="contributor.links" :colors="[constants.colorsDefault[0], constants.colorsDefault[1]]" :hide-button-if-inactive="true" :with-website="true" />
 		</div>
 	</Popover>
 </template>
