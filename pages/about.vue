@@ -141,10 +141,11 @@
 
 
 <script setup lang="ts">
+import ArtistPopover from '~/components/ArtistPopover.vue'
 const artistPopover = ref<InstanceType<typeof ArtistPopover> | null>(null)
 
 function showArtistPopoverHandler(event: MouseEvent) {
-	artistPopover.value.show(event, (event.target as HTMLElement).textContent)
+	artistPopover.value?.show(event, (event.target as HTMLElement).textContent || "")
 }
 
 const config = useRuntimeConfig()

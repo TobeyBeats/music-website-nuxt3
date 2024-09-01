@@ -9,6 +9,7 @@
 
 <script setup lang="ts">
 import Popover from "primevue/popover"
+import { Contributor } from "#imports"
 
 const popover = ref<InstanceType<typeof Popover>>()
 
@@ -19,13 +20,13 @@ const contributor = ref<Contributor | null>(null)
 defineExpose({
 	show: (event: MouseEvent, name: string) => {
 		const target = event.target
-		$fetch<Contributor[]>(`/contributors`, {
+		$fetch<ConstructorParameters<typeof Contributor>[0][]>(`/contributors`, {
 			baseURL: config.public.baseUrlApi,
 			query: {
 				name
 			}
 		}).then(contributors => {
-			contributor.value = contributors[0]
+			contributor.value = new Contributor(contributors[0])
 			if (popover.value) {
 				popover.value.show(event, target)
 			}
