@@ -19,9 +19,9 @@ onMounted(() => setActiveColors(constants.colorsDefault[0], constants.colorsDefa
 	--background-color: #232323;
 	--background-color-50: #23232380;
 	--background-color-25: #23232340;
-	--text-color-default: #d0d0d0;
+	--text-color-default: #ffffffc0;
 	--text-color-highlight: #ffffff;
-	--text-color-faded: #d0d0d0a0;
+	--text-color-faded: #ffffff70;
 	--box-shadow-default: 0px 0px 25px rgba(0, 0, 0, 0.5);
 	--space-unit: 1rem;
 	--border-radius-small: 0.3rem;
