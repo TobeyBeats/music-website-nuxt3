@@ -74,5 +74,8 @@ export default defineNuxtConfig({
 				overlay: false
 			}
 		}
-	}
+	},
+	modules: [
+        '@primevue/nuxt-module'
+    ],
 })

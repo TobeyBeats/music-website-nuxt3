@@ -15,20 +15,19 @@
 						<div class="pa-content-box">
 							<h2>Biography</h2>
 							<p>
-								Tobias, the man behind <ArtistPopover>Fedders</ArtistPopover>
-								and his older alias and side project <ArtistPopover>TobeyBeats</ArtistPopover>,
-								is a 22 year old musician and producer from Germany who has developed his interest in music
+								Tobias, the man behind <button @click="showArtistPopoverHandler">Fedders</button>
+								and <button @click="showArtistPopoverHandler">TobeyBeats</button>,
+								is a 23 year old musician and producer from Germany who has developed his interest in music
 								for as long as he can remember.
 								His musical taste reaches all the way from classical instrumental music to modern pop and
 								electronic music.
-								After playing the drums and piano for many years, he's currently also releasing his own
-								music on various labels in the EDM scene.
+								After playing the drums and piano for a big part of his life, he's now producing and releasing his own music in various genres.
 							</p>
 						</div>
 						<div class="pa-content-box">
 							<h2>Instruments</h2>
 							<p>
-								There has always been affinity to music and rhythms, so in 2008 he started taking lessons on the
+								Tobias has always felt affinity to music and rhythms, so in 2008 he started taking lessons on the
 								drums, later additionally on mallets like marimba and xylophone and also piano.
 								Since then he's consistently playing in many orchestras and bands as drummer and
 								percussionist.
@@ -42,12 +41,18 @@
 								Around 2013 he started experimenting with recording music in Audacity and shortly after got
 								into electronic production in a DAW called MuLab, and since 2015 in Ableton Live.
 								After he already created and uploaded plenty of older tracks to Youtube, he got his first
-								official release on platforms like Spotify in 2019.
+								official release on platforms like Spotify in 2019 with his artist name <button  @click="showArtistPopoverHandler">TobeyBeats</button>.
+								After getting a bit more serious about the music, he decided that he didn't want to mix up all kinds of genres and vibes under the same alias,
+								so in the beginning of 2024, he founded his new alias <button @click="showArtistPopoverHandler">Fedders</button>, focussing on more deep and chill music,
+								keeping <button @click="showArtistPopoverHandler">TobeyBeats</button> for more energetic and heavy music.
 								Since then, he released on labels like 
-								<ArtistPopover>Big Smile Records</ArtistPopover>,
-								<ArtistPopover>Stardust</ArtistPopover>,
-								<ArtistPopover>SWUTCH Music</ArtistPopover> and
-								<ArtistPopover>Gahara</ArtistPopover>.
+								<button @click="showArtistPopoverHandler">Stardust</button>,
+								<button @click="showArtistPopoverHandler">SWUTCH Music</button> and
+								<button @click="showArtistPopoverHandler">Cracking Records</button>
+								under <button @click="showArtistPopoverHandler">TobeyBeats</button>, and on labels like
+								<button @click="showArtistPopoverHandler">Soave Records</button>,
+								<button @click="showArtistPopoverHandler">Gahara</button> and
+								<button @click="showArtistPopoverHandler">ChillYourMind</button> under <button @click="showArtistPopoverHandler">Fedders</button>.
 							</p>
 						</div>
 						<div style="height: 170px;"></div>
@@ -62,56 +67,61 @@
 						<div class="pa-content-box">
 							<h2>Discography – Overview</h2>
 							<p>
-								He's constantly trying out new genres, currently most of his releases go into the direction
-								of House in various subgenres, like his track <NuxtLink to="releases/karma" class="link">Karma&nbsp;→&#xFE0E;</NuxtLink>,
-								and Future Bass / Melodic Bass, like
-								<NuxtLink to="/releases/rescue-me" class="link">Rescue&nbsp;Me&nbsp;→&#xFE0E;</NuxtLink>.
+								He's constantly trying out new genres, currently most of his releases on <button @click="showArtistPopoverHandler">Fedders</button> go into the direction
+								of Deep House and Chill House, like one of his newest songs <NuxtLink to="releases/who-do-you-love" class="link">Who Do You Love&nbsp;→&#xFE0E;</NuxtLink>
+								released on the label <button @click="showArtistPopoverHandler">ChillYourMind</button>,
+								on <button @click="showArtistPopoverHandler">TobeyBeats</button> he has already released songs in many different genres
+								like Future Bass, Future House, and Dubstep, like his song <NuxtLink to="releases/feel-alive" class="link">Feel Alive&nbsp;→&#xFE0E;</NuxtLink>.
 							</p>
+							<p></p>
+							<div class="rounded shadow-std" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr));">
+								<template v-for="coverUrl in coverUrlsRow1">
+									<img :src="coverUrl" style="height: auto; width: 100%; object-fit: cover;" />
+								</template>
+							</div>
 							<p>
-
-								<span class="float-end floating-cover" style="display: inline-flex; flex-direction: column; gap: 1rem; margin-left: 0.5rem;">
-									<img :src="'/images/covers/rescue%20me%20cover.jpg'" loading="lazy"
-										class="rounded shadow-std" />
-									<img :src="'/images/covers/alone%20in%20the%20dark%20cover.jpg'" loading="lazy"
-										class="rounded shadow-std" />
-									<img :src="'/images/covers/Under%20Water%20Cover.jpeg'" loading="lazy"
-										class="rounded shadow-std" />
-								</span>
-
 								During the start of the pandemic in 2020, he established many contacts, especially other
 								like-minded producers on Discord and Instagram.
 								For the first time he realised the huge extent of the music community, which opened up the
 								doors for collaborating with musicians worldwide.<br />
-								In September 2021, he released his so far biggest project
+								In September 2021, he released
 								<NuxtLink to="/releases/rescue-me" class="link">Rescue&nbsp;Me&nbsp;→&#xFE0E;</NuxtLink>,
 								which is a big collaboration together with producers
-								<ArtistPopover>Størm</ArtistPopover> from Bangladesh,
-								<ArtistPopover>Skyptomiax</ArtistPopover> from
+								<button @click="showArtistPopoverHandler">Størm</button> from Bangladesh,
+								<button @click="showArtistPopoverHandler">Skyptomiax</button> from
 								India, lyricist
-								<ArtistPopover>Veda Varshitha</ArtistPopover> from India and singer-songwriter
-								<ArtistPopover>Ana Grosh</ArtistPopover> from
+								<button @click="showArtistPopoverHandler">Veda Varshitha</button> from India and singer-songwriter
+								<button @click="showArtistPopoverHandler">Ana Grosh</button> from
 								Atlanta.<br />
-
+							</p>
+							<p>
 								He appreciated the exchange of ideas and inspiration of such collaborations so much, that he
 								worked together with other artists again on many songs,
 								like on <NuxtLink to="/releases/alone-in-the-dark" class="link">Alone&nbsp;In&nbsp;The&nbsp;Dark&nbsp;→&#xFE0E;</NuxtLink>
 								with producer
-								<ArtistPopover>MAESTRI</ArtistPopover> from Austria and singer
-								<ArtistPopover>Sir David</ArtistPopover> from
+								<button @click="showArtistPopoverHandler">MAESTRI</button> from Austria and singer
+								<button @click="showArtistPopoverHandler">Sir David</button> from
 								Germany, released on OZLO
-								(<ArtistPopover>SWUTCH Music</ArtistPopover>),
+								(<button @click="showArtistPopoverHandler">SWUTCH Music</button>),
 								and on <NuxtLink to="/releases/sad-songs" class="link">Sad&nbsp;Songs&nbsp;→&#xFE0E;</NuxtLink>, with
-								<ArtistPopover>Taca Music</ArtistPopover>  from Norway and singer-songwriter
-								<ArtistPopover>Laryssa Vachon</ArtistPopover> from Canada, released on
-								<ArtistPopover>Stardust</ArtistPopover>.<br />
-								<br />
-
-								One of his latest releases, and his personal favorite release so far,
-								<NuxtLink to="/releases/under-water" class="link">Under&nbsp;Water&nbsp;→&#xFE0E;</NuxtLink>,
-								is a Deep Progressive House song together with singer-songwriter
-								<ArtistPopover>LizAnn</ArtistPopover> from
-								Switzerland. It has been in the works for many months and was released on 9th December 2022 via the label
-								<ArtistPopover>Gahara</ArtistPopover>.<br />
+								<button @click="showArtistPopoverHandler">Taca Music</button>  from Norway and singer-songwriter
+								<button @click="showArtistPopoverHandler">Laryssa Vachon</button> from Canada, released on
+								<button @click="showArtistPopoverHandler">Stardust</button>.
+							</p>
+							<p></p>
+							<div class="rounded shadow-std" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr));">
+								<template v-for="coverUrl in coverUrlsRow2">
+									<img :src="coverUrl" style="height: auto; width: 100%; object-fit: cover;" />
+								</template>
+							</div>
+							<p>
+								Over the time, he also got to appreciate the more chilled side of music as well, influencing his first Chill House song
+								<NuxtLink to="/releases/under-water" class="link">Under Water&nbsp;→&#xFE0E;</NuxtLink>, together with singer-songwriter
+								<button @click="showArtistPopoverHandler">LizAnn</button> from Switzerland, released on <button @click="showArtistPopoverHandler">Gahara</button> in late 2022.
+								Since he still wanted to keep the energetic side of his music, he decided release all chill or rather commercial music under the alias <button @click="showArtistPopoverHandler">Fedders</button> from 2024 on,
+								where he already released numerous songs in 2024 alone, like <NuxtLink to="/releases/problems" class="link">Problems&nbsp;→&#xFE0E;</NuxtLink>, again with singer-songwriter <button @click="showArtistPopoverHandler">LizAnn</button>,
+								<NuxtLink to="/releases/riders-of-the-storm" class="link">Riders Of The Storm&nbsp;→&#xFE0E;</NuxtLink> with singer-songwriter <button @click="showArtistPopoverHandler">Kezano</button> from Sweden, both on <button @click="showArtistPopoverHandler">Soave Records</button>,
+								but also <NuxtLink to="/releases/greedy" class="link">Greedy&nbsp;→&#xFE0E;</NuxtLink> with singer <button @click="showArtistPopoverHandler">Malin Horsevik</button> from Norway, covering a popular song originally by <button @click="showArtistPopoverHandler">Tate McRae</button> in form of melancholic and orchestral Chill Trap, released on <button @click="showArtistPopoverHandler">Trapical</button>.
 							</p>
 							<p>
 								You can see all his latest and also upcoming music on the page <NuxtLink to="/releases" class="link">Releases&nbsp;→&#xFE0E;</NuxtLink>.
@@ -124,59 +134,46 @@
 
 		</div>
 
+		<ArtistPopover ref="artistPopover" />
+
 	</div>
 </template>
 
 
 <script setup lang="ts">
+import ArtistPopover from '~/components/ArtistPopover.vue'
+const artistPopover = ref<InstanceType<typeof ArtistPopover> | null>(null)
+
+function showArtistPopoverHandler(event: MouseEvent) {
+	artistPopover.value?.show(event, (event.target as HTMLElement).textContent || "")
+}
+
+const config = useRuntimeConfig()
+
+async function getCoverUrl(releaseId: string) {
+	const release = await $fetch<ConstructorParameters<typeof Release>[0]>(`/releases/${releaseId}`, {
+		baseURL: config.public.baseUrlApi
+	})
+	return release.thumbnailUrl
+}
+
+const coverUrlsRow1 = ref<string[]>([])
+const coverUrlsRow2 = ref<string[]>([])
+onMounted(async () => {
+	for (const releaseId1 of ["rescue-me", "sad-songs", "feel-alive"]) {
+		const url = await getCoverUrl(releaseId1)
+		coverUrlsRow1.value.push(url)
+	}
+	for (const releaseId2 of ["problems", "greedy", "who-do-you-love"]) {
+		const url = await getCoverUrl(releaseId2)
+		coverUrlsRow2.value.push(url)
+	}
+})
+
 definePageMeta({
 	layout: "full-page-no-cursor-follower"
 })
 </script>
-
-<!-- <script lang="ts">
-import ShowSocialsButton from "~/components/ShowSocialsButton.vue"
-import NuxtLinkWithTooltip from "~/components/NuxtLinkWithTooltip.vue";
-import { Contributor, openArtistModal } from "~/composables/releases";
-import { defineComponent } from "vue";
-import globalConstants from "~/composables/globalConstants";
-
-export default defineComponent({
-	head() {
-		return {
-			meta: [
-				{ hid: "description", name: "description", content: "TobeyBeats' biography and artist pictures" },
-				{ property: "og:title", content: "About TobeyBeats", hid: "title" },
-				{ property: "og:description", content: "TobeyBeats' biography and artist pictures", hid: "descriptionog" }
-			]
-		};
-	},
-	data() {
-		return {
-			contributors: [] as Contributor[],
-			modalLinks: {} as { spotify: string, instagram: string, youtube: string },
-			modalTitle: ""
-		};
-	},
-	async asyncData(context) {
-		const response = await context.$axios.get(`${globalConstants.tobeybeatsApiBaseUrl}/contributors/`)
-		if (response.status != 200) {
-			context.redirect("/404")
-			return
-		}
-		const contributors: Contributor[] = response.data.map((obj: any) => new Contributor(obj))
-		return {
-			contributors
-		}
-	},
-	methods: {
-		openModal: function (event: MouseEvent) {
-			openArtistModal(this, event.target, this.contributors);
-		}
-	},
-	components: { NuxtLinkWithTooltip, ShowSocialsButton }
-})
-</script> -->
 
 
 <style lang="scss">
@@ -184,6 +181,19 @@ export default defineComponent({
 	--scale: 0.2;
 	--space: 5vmin;
 	--bg-rgb-triple: 10, 10, 10;
+
+	button {
+		color: var(--text-color-highlight);
+		text-decoration: underline;
+		text-decoration-color: transparent;
+		&:hover, &:focus-within {
+			text-decoration-color: currentColor;
+		}
+	}
+
+	h2 {
+		margin-bottom: 0.25rem;
+	}
 }
 
 .float-start {
